@@ -1,0 +1,4 @@
+.nav-link-active{display:block;}
+.nav-link-disabled{display: none;}
+/*路由切换时，导航链接当前样式类*/
+.route-active{color:#d43d3d;}

@@ -1,0 +1,13 @@
+/*全局通用样式*/
+a{text-decoration: none;color:#000;}
+body,ul,li,p,h1,h2,h3,h4,h5{margin:0;padding:0;}
+body{ font-weight: normal;font-family:"Helvetica Neue", Helvetica, STHeiTi, 'Microsoft Yahei',sans-serif; -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;
+  outline: none;}
+/*rem字体设置*/
+html{font-size:20px;}
+html, body {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.con-hide{display: none;}
+.con-show{display: block;}

@@ -1,0 +1,8 @@
+.head-wrap{width:100%;height:2.5rem;}
+.head{position:relative;width:100%;height:2.5rem;line-height:2.5rem;border-bottom:1px solid #fff;background-color: #d43d3d;color:#fff;}
+.head-fixed{position:fixed;}
+.head .title{font-size:0.825rem;text-align:center;font-weight:normal;}
+.head .iconfont{color:#fff;font-size:1rem;}
+.head .search-btn{position:absolute;right:2.8rem;top:0.12rem;}
+.head .user-center-btn{position:absolute;right:0.6rem;top:0.06rem;}
+.head .back-btn{position:absolute;left:0.5rem;top:0.06rem;}

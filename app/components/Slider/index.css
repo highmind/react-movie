@@ -1,0 +1,5 @@
+.h-slider{width:96%;margin:0 auto;}
+.h-slider .slider-list{height:10rem!important;}
+.h-slider img{display: block;width:100%;}
+.h-slider .am-carousel-wrap-dot > span{background-color: #000;opacity:0.4;}
+.h-slider .am-carousel-wrap-dot-active >span{opacity:1;}

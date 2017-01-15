@@ -1,0 +1,6 @@
+.detail-wrap{width:100%;overflow:hidden;}
+.detail-con{width:17rem;margin:0 auto;overflow:hidden;margin-top:3.35rem;}
+.detail-title{font-size:0.9rem;}
+.detail-bar{padding-bottom:0.3rem;font-size:0.6rem;color:#bdbdbd;margin:0.5rem 0;border-bottom:1px solid #bdbdbd;}
+.detail-text{font-size:0.75rem;line-height:2em;}
+.detail-text p{margin-top:0.6rem;text-indent:2em;}

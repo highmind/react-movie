@@ -1,0 +1,9 @@
+.news-nav{osition:relative;overflow:hidden;background-color: #f4f5f6;}
+.news-nav-top{padding-left:2%;overflow:hidden;}
+.news-nav-top a{margin-top:20px;float:left;width:14%;color:#505050;font-size:0.8rem;text-align: center;}
+.news-nav .news-more{display: block;width:26px;text-align:center;margin:0 auto;transition:all linear 0.3s;}
+.news-nav .iconfont{color:#d43d3d;font-size:16px;}
+.news-nav .arrowActive{transform:rotate(180deg);}
+.news-nav-bottom{padding:0.25rem 0;}
+/*路由切换时，导航链接当前样式类*/
+.news-nav .route-active{color:#d43d3d;}
