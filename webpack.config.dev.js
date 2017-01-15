@@ -22,7 +22,7 @@ module.exports =  {
   // 档案起始点从 entry 进入，因为是阵列所以也可以是多个档案
   entry: {
     app: './app/index.js',
-    vendor:['react', 'react-dom', 'react-router', 'axios']
+    vendor:['react', 'react-dom', 'react-router', 'axios', 'redux', 'react-redux']
   },
   // output 是放入产生出来的结果的相关参数
   output: {

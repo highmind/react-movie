@@ -145,7 +145,7 @@ class Main extends Component{
     render(){
         return(
               <div>
-                  <Head name="橙子新闻" type="MainHead"/>
+                  <Head name="芝麻电影" type="MainHead"/>
                   <Nav data={this.state.nav}/>
                   <div>
                       <Loading active={this.state.loading} />
