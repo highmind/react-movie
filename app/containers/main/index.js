@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import {NewsList, Head, Nav, Slider, Loading} from '../../components';
+import {NewsList, NavBar, Nav, Slider, Loading, Icon} from '../../components';
 import Axios from 'axios'; //引入axios处理ajax
-
+import './index.css';
 //首页页面
 class Main extends Component{
     constructor(props){
@@ -10,12 +10,16 @@ class Main extends Component{
         console.log('Main执行getInitialState')
         this.ignoreLastFetch = false;
         this.state = {
+          navActive : false,
           newslist : [],   //新闻列表数据
           nav : [],        //导航数据
           slider : [],     //轮播图数据
           sliderId : 0,    //轮播图组件id
           loading : true   //loading参数
         }
+        this.props.navActive(false)
+        this.toggleNav = this.toggleNav.bind(this);
+        this.setNavActive = this.setNavActive.bind(this);
     }
 
     getData(id){
@@ -87,6 +91,7 @@ class Main extends Component{
     }
 
     componentDidMount(){
+        // 初始化时，设置导航状态
         console.log('--------Containers/Main--------');
         console.log('Main执行componentDidMount');
         let url = 'http://mockdata/get/nav';
@@ -142,12 +147,67 @@ class Main extends Component{
 
     }
 
+    // NavBar按钮点击，切换Nav的显示和隐藏
+    toggleNav(){
+      console.log('toggleNav');
+
+      this.setState({
+        navActive : !this.state.navActive
+      })
+      this.props.navActive(!this.state.navActive)
+    }
+
+    setNavActive(){
+      console.log('...setNavActive...');
+      this.setState({
+        navActive : !this.state.navActive
+      });
+    }
+
+    getNavActive(){
+      let data = this.props.navActiveData;
+      console.log('...data...')
+      console.log(data)
+      let len = data.length;
+      if(len != 0){
+        return data[len - 1].navActiveData
+      }
+      else{
+        return false;
+      }
+
+    }
+
     render(){
+        // let active = this.getNavActive();
+        // console.log('...active...')
+        // console.log(active)
+        // NavBar左侧子组件
+        let navBarLeftNode = [
+          <a className="left-btn" href="javascript:void(0);" onClick={this.toggleNav}>
+            <Icon key="2" type="icon-caidan01" />
+          </a>
+        ];
+        // NavBar右侧子组件
+        let navBarRightNode = [
+          <a className="right-btn-1" href="#">
+            <Icon key="0" type="icon-user" />
+          </a>,
+          <a className="right-btn-2" href="#">
+            <span className="city">秦皇岛</span>
+            <Icon key="1" type="icon-xiangxiajiantou" />
+          </a>
+        ]
+
         return(
               <div>
-                  <Head name="芝麻电影" type="MainHead"/>
-                  <Nav data={this.state.nav}/>
-                  <div>
+                  <NavBar name="芝麻电影"
+                    leftContent={[navBarLeftNode]}
+                    rightContent={[navBarRightNode]} />
+                  <Nav data={this.state.nav}
+                    active={this.state.navActive}
+                    setNavActive={this.setNavActive} />
+                  <div className="main-con">
                       <Loading active={this.state.loading} />
                       <div className={this.state.loading ? "con-hide" : "con-show"}>
                         <Slider id={this.state.sliderId} data={this.state.slider} />

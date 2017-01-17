@@ -34,7 +34,11 @@ class App extends Component{
 //               {this.props.children}
 //           </div>
 function mapStateToProps(state){
-    return { position: state.setScroll,todoList : state.todos}
+    return {
+      position: state.setScroll,
+      todoList : state.todos,
+      navActiveData : state.navActive
+    }
 }
 
 function mapDispatchToProps(dispatch){

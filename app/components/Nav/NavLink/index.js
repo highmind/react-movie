@@ -1,10 +1,20 @@
 import React,{Component} from 'react';
 import { Link } from 'react-router';
+import Icon from '../../Icon';
 import './index.css';
-class NavLink extends React.Component{
+class NavLink extends Component{
     render(){
+        const {link, active, id, name} = this.props;
         return (
-            <Link to={this.props.link} activeClassName="route-active" className={this.props.active ? 'nav-link-active' : 'nav-link-disabled'}  key={this.props.id}>{this.props.name}</Link>
+
+            <Link to={link} activeClassName="route-active"
+              className="nav-link"
+              key={id}>
+              {name}
+             <Icon type="icon-xiangyoujiantou" />
+            </Link>
+
+  
         )
     }
 

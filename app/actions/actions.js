@@ -5,7 +5,7 @@
 export const ADD_TODO = 'ADD_TODO';
 export const DELETE_TODO = 'DELETE_TODO';
 export const SCROLL_POSITION = 'SCROLL_POSITION'; //滚动条位置
-
+export const ACTIVE_NAV = 'ACTIVE_NAV';//导航打开和关闭
 /*
  * action 创建函数
  */
@@ -23,4 +23,9 @@ export function deleteToDo(index){
 export function setScroll(positionData){
   console.log('scrollPosition action 创建函数');
   return {type: SCROLL_POSITION, positionData}
+}
+
+export function navActive(active){
+  console.log('activeNav action 创建函数');
+  return {type: ACTIVE_NAV, active}
 }

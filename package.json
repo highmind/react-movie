@@ -1,7 +1,6 @@
 {
   "name": "react-movie",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
   "main": "webpack.config.js",
   "dependencies": {
     "axios": "^0.15.3",
@@ -43,5 +42,14 @@
     "start": "webpack-dev-server --config webpack.config.dev.js  --history-api-fallback"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/highmind/react-movie.git"
+  },
+  "bugs": {
+    "url": "https://github.com/highmind/react-movie/issues"
+  },
+  "homepage": "https://github.com/highmind/react-movie#readme",
+  "description": ""
 }

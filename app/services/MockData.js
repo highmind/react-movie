@@ -63,66 +63,6 @@ Mock.mock('http://mockdata/get/nav', 'get', {
             "link": "/index/baijia7",
             "name": "\u79d1\u6280",
             "id": 8
-        },
-        {
-            "link": "/index/baijia8",
-            "name": "\u5973\u4eba",
-            "id": 9
-        },
-        {
-            "link": "/index/baijia9",
-            "name": "\u751f\u6d3b",
-            "id": 10
-        },
-        {
-            "link": "/index/baijia10",
-            "name": "\u56fd\u9645",
-            "id": 11
-        },
-        {
-            "link": "/index/baijia11",
-            "name": "\u56fd\u5185",
-            "id": 12
-        },
-        {
-            "link": "/index/baijia12",
-            "name": "\u4f53\u80b2",
-            "id": 13
-        },
-        {
-            "link": "/index/baijia13",
-            "name": "\u6c7d\u8f66",
-            "id": 14
-        },
-        {
-            "link": "/index/baijia14",
-            "name": "\u8d22\u7ecf",
-            "id": 15
-        },
-        {
-            "link": "/index/baijia15",
-            "name": "\u623f\u4ea7",
-            "id": 16
-        },
-        {
-            "link": "/index/baijia16",
-            "name": "\u65f6\u5c1a",
-            "id": 17
-        },
-        {
-            "link": "/index/baijia17",
-            "name": "\u6559\u80b2",
-            "id": 18
-        },
-        {
-            "link": "/index/baijia18",
-            "name": "\u4eba\u6587",
-            "id": 19
-        },
-        {
-            "link": "/index/baijia19",
-            "name": "\u65c5\u6e38",
-            "id": 20
         }
     ]
 
