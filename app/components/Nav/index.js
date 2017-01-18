@@ -1,41 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Link,IndexLink } from 'react-router';
+import {Link, IndexLink} from 'react-router';
 import NavLink from './NavLink';
 import IcoLink from '../IcoLink';
 import './index.css';
 class Nav extends React.Component{
     constructor(props){
       super(props);
-      this.state={
+      this.state = {
         active : this.props.active
       }
-      this.toggleClick = this.toggleClick.bind(this)
-      console.log('...nav...')
-      console.log(this.props.active)
     }
-
-    // 点击导航链接以后，隐藏导航
-    toggleClick(){
-      // this.setState({
-      //   active : !this.state.active
-      // })
-      console.log('...nav... click')
-      // this.props.setNavActive(!this.state.active);
-    }
-
-    // componentDidMount(){
-    //   this.setState({
-    //     active : this.props.active
-    //   })
-    // }
 
     render(){
+        let navNodes = this.props.data.map(function(detail, index){
+           if(index == 0){
+                return(
+                  <IndexLink className="nav-link" to="/" activeClassName="route-active">
+                    {detail.name}
+                    <i className="iconfont icon-xiangyoujiantou"></i>
+                  </IndexLink>
+                )
+            }else{
+                  return(
+                    <NavLink
+                      key={detail.id}
+                      name={detail.name}
+                      link={detail.link}/>
+                  )
+            }
 
-         let navNodes = this.props.data.map(function(detail, index){
-            return(
-              <NavLink key={detail.id} name={detail.name} link={detail.link}/>
-            )
         })
 
         return (

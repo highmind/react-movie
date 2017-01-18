@@ -25,17 +25,17 @@ Mock.mock('http://mockdata/get/nav', 'get', {
             "id": 0
         },
         {
-            "link": "/index/film",
+            "link": "/film",
             "name": "影片",
             "id": 1
         },
         {
-            "link": "/index/cinema",
+            "link": "/cinema",
             "name": "影院",
             "id": 2
         },
         {
-            "link": "/index/user",
+            "link": "/user",
             "name": "我的",
             "id": 3
         }
