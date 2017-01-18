@@ -1,10 +1,12 @@
 .head-wrap{width:100%;height:2.5rem;}
 .head{position:relative;z-index:100;width:100%;height:2.5rem;background-color: #d43d3d;color:#fff;}
 .head-fixed{position:fixed;z-index:100;}
-.head .title{font-size:0.825rem;line-height:2.5rem;text-align:center;font-weight:normal;}
+.head .title{font-size:0.7rem;line-height:2.5rem;text-align:center;font-weight:normal;}
 .head .iconfont{color:#fff;font-size:1rem;}
-.head .right-btn-2{position:absolute;right:2.8rem;}
-.head .right-btn-1{position:absolute;right:0.6rem;}
-.head .left-btn{position:absolute;left:0.5rem;}
+.head .right-btn-2{display: block;height:2.5rem;position:absolute;right:2.8rem;}
+.head .right-btn-1{display: block;height:2.5rem;line-height: 2.5rem;position:absolute;right:0.6rem;}
+.head .left-btn{display: block;height:2.5rem;line-height: 2.5rem;position:absolute;left:0.5rem;}
 .head .right-btn-2 .iconfont{font-size:0.7rem}
-.head .city{color:#fff;margin-right:4px;font-size:0.8rem;}
+.head .right-btn-1 .iconfont{position:absolute;right:0;}
+.head .left-btn .iconfont{position:absolute;left:0;}
+.head .city{color:#fff;margin-right:4px;font-size:0.7rem;height:2.5rem;line-height:2.5rem;}

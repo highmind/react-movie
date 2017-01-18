@@ -1,5 +1,5 @@
 import Mock from 'mockjs';
-let ip = 'localhost:8080';
+let ip = '192.168.2.104:8080';
 // 详情页mock数据
 Mock.mock('http://mockdata/get/detail', 'get', {
   "data" : {
@@ -44,121 +44,10 @@ Mock.mock('http://mockdata/get/nav', 'get', {
 
 })
 
-//新闻列表mock数据
-// Mock.mock('http://mockdata/get/newslist', 'get', {
-//     "data" : [
-//         {
-//           "url": "#/detail/01",
-//           // "imgUrl" : "@image(216x148,@color,#FFF,@word)",
-//           "imgUrl" : [
-//               "http://"+ ip +"/images/news-img1.jpg"
-//           ],
-//           "time" : "@natural(10,60)" + "分钟前",
-//           "title" : "1@csentence(16,24)",
-//           "id" : 0,
-//           "displayType" : 1
-//         },
-//         {
-//           "url": "#/detail/02",
-//           // "imgUrl" : "@image(216x148,@color,#FFF,@word)",
-//            "imgUrl" : [
-//               "http://"+ ip +"/images/news-img2.jpg"
-//           ],
-//           "time" : "@natural(10,60)" + "分钟前",
-//           "title" : "2@csentence(20,24)",
-//           "id" : 1,
-//           "displayType" : 1
-//         },
-//         {
-//           "url": "#/detail/03",
-//           // "imgUrl" : "@image(216x148,@color,#FFF,@word)",
-//            "imgUrl" : [
-//               "http://"+ ip +"/images/news-img1.jpg",
-//               "http://"+ ip +"/images/news-img2.jpg",
-//               "http://"+ ip +"/images/news-img3.jpg"
-//           ],
-//           "time" : "@natural(10,60)" + "分钟前",
-//           "title" : "3@csentence(20,24)",
-//           "id" : 2,
-//           "displayType" : 2
-//         },
-//         {
-//           "url": "#/detail/04",
-//           //"imgUrl" : "@image(216x148,@color,#FFF,@word)",
-//            "imgUrl" : [
-//               "http://"+ ip +"/images/news-img4.jpg"
-//           ],
-//           "time" : "@natural(10,60)" + "分钟前",
-//           "title" : "4@csentence(20,24)",
-//           "id" : 3,
-//           "displayType" : 1
-//         },
-//         {
-//           "url": "#/detail/05",
-//           // "imgUrl" : "@image(216x148,@color,#FFF,@word)",
-//           "imgUrl" : [
-//               "http://"+ ip +"/images/news-img5.jpg",
-//               "http://"+ ip +"/images/news-img6.jpg",
-//               "http://"+ ip +"/images/news-img2.jpg"
-//           ],
-//           "time" : "@natural(10,60)" + "分钟前",
-//           "title" : "5@csentence(20,24)",
-//           "id" : 4,
-//           "displayType" : 2
-//         },
-//         {
-//           "url": "#/detail/06",
-//           // "imgUrl" : "@image(216x148,@color,#FFF,@word)",
-//            "imgUrl" : [
-//               "http://"+ ip +"/images/news-img6.jpg"
-//           ],
-//           "time" : "@natural(10,60)" + "分钟前",
-//           "title" : "6@csentence(20,24)",
-//           "id" : 5,
-//           "displayType" : 1
-//         },
-//         {
-//           "url": "#/detail/07",
-//           // "imgUrl" : "@image(216x148,@color,#FFF,@word)",
-//            "imgUrl" : [
-//               "http://"+ ip +"/images/news-img1.jpg"
-//           ],
-//           "time" : "@natural(10,60)" + "分钟前",
-//           "title" : "7@csentence(20,24)",
-//           "id" : 6,
-//           "displayType" : 1
-//         },
-//         {
-//           "url": "#/detail/08",
-//           // "imgUrl" : "@image(216x148,@color,#FFF,@word)",
-//            "imgUrl" : [
-//              "http://"+ ip +"/images/news-img2.jpg"
-//           ],
-//           "time" : "@natural(10,60)" + "分钟前",
-//           "title" : "8@csentence(20,24)",
-//           "id" : 7,
-//           "displayType" : 1
-//         },
-//         {
-//           "url": "#/detail/09",
-//           // "imgUrl" : "@image(216x148,@color,#FFF,@word)",
-//            "imgUrl" : [
-//               "http://"+ ip +"/images/news-img3.jpg"
-//           ],
-//           "time" : "@natural(10,60)" + "分钟前",
-//           "title" : "9@csentence(20,24)",
-//           "id" : 8,
-//           "displayType" : 1
-//         }
 
 
-
-//     ]
-
-// })
-
-//新闻列表mock数据 包含slider数据 browserHistory
-Mock.mock('http://mockdata/get/newslist', 'get', {
+//Home组件 电影列表数据 browserHistory
+Mock.mock('http://mockdata/get/filmlist', 'get', {
     "slider" :{
       "id" : "@id",
       "data":[
@@ -180,113 +69,98 @@ Mock.mock('http://mockdata/get/newslist', 'get', {
       ]
     },
 
-    "data" : [
-        {
-          "url": "/detail/01",
-          // "imgUrl" : "@image(216x148,@color,#FFF,@word)",
-          "imgUrl" : [
-              "http://"+ ip +"/images/news-img1.jpg"
-          ],
-          "time" : "@natural(10,60)" + "分钟前",
-          "title" : "1@csentence(16,24)",
-          "id" : "@id",
-          "displayType" : 1
+    "playingData" : [
+      {
+        "id": 3545,
+        "name": "太空旅客1",
+        "cover": {
+            "origin": "http://"+ ip +"/images/m-img1.jpg"
         },
-        {
-          "url": "/detail/02",
-          // "imgUrl" : "@image(216x148,@color,#FFF,@word)",
-           "imgUrl" : [
-              "http://"+ ip +"/images/news-img2.jpg"
-          ],
-          "time" : "@natural(10,60)" + "分钟前",
-          "title" : "2@csentence(20,24)",
-          "id" : "@id",
-          "displayType" : 1
+        "intro": "未达目的地 太空铁达尼1",
+        "grade": "8.51",
+        "watchCount": 3679251,
+        "cinemaCount": 1221,
+      },
+      {
+        "id": 3546,
+        "name": "太空旅客2",
+        "cover": {
+            "origin": "http://"+ ip +"/images/m-img1.jpg"
         },
-        {
-          "url": "/detail/03",
-          // "imgUrl" : "@image(216x148,@color,#FFF,@word)",
-           "imgUrl" : [
-              "http://"+ ip +"/images/news-img1.jpg",
-              "http://"+ ip +"/images/news-img2.jpg",
-              "http://"+ ip +"/images/news-img3.jpg"
-          ],
-          "time" : "@natural(10,60)" + "分钟前",
-          "title" : "3@csentence(20,24)",
-          "id" : "@id",
-          "displayType" : 2
+        "intro": "未达目的地 太空铁达尼",
+        "grade": "8.52",
+        "watchCount": 3679252,
+        "cinemaCount": 1222,
+      },
+      {
+        "id": 3547,
+        "name": "太空旅客3",
+        "cover": {
+            "origin": "http://"+ ip +"/images/m-img1.jpg"
         },
-        {
-          "url": "/detail/04",
-          //"imgUrl" : "@image(216x148,@color,#FFF,@word)",
-           "imgUrl" : [
-              "http://"+ ip +"/images/news-img4.jpg"
-          ],
-          "time" : "@natural(10,60)" + "分钟前",
-          "title" : "4@csentence(20,24)",
-          "id" : "@id",
-          "displayType" : 1
+        "intro": "未达目的地 太空铁达尼3",
+        "grade": "8.53",
+        "watchCount": 3679253,
+        "cinemaCount": 1223,
+      },
+      {
+        "id": 3548,
+        "name": "太空旅客4",
+        "cover": {
+            "origin": "http://"+ ip +"/images/m-img1.jpg"
         },
-        {
-          "url": "/detail/05",
-          // "imgUrl" : "@image(216x148,@color,#FFF,@word)",
-          "imgUrl" : [
-              "http://"+ ip +"/images/news-img5.jpg",
-              "http://"+ ip +"/images/news-img6.jpg",
-              "http://"+ ip +"/images/news-img2.jpg"
-          ],
-          "time" : "@natural(10,60)" + "分钟前",
-          "title" : "5@csentence(20,24)",
-          "id" : "@id",
-          "displayType" : 2
-        },
-        {
-          "url": "/detail/06",
-          // "imgUrl" : "@image(216x148,@color,#FFF,@word)",
-           "imgUrl" : [
-              "http://"+ ip +"/images/news-img6.jpg"
-          ],
-          "time" : "@natural(10,60)" + "分钟前",
-          "title" : "6@csentence(20,24)",
-          "id" : "@id",
-          "displayType" : 1
-        },
-        {
-          "url": "/detail/07",
-          // "imgUrl" : "@image(216x148,@color,#FFF,@word)",
-           "imgUrl" : [
-              "http://"+ ip +"/images/news-img1.jpg"
-          ],
-          "time" : "@natural(10,60)" + "分钟前",
-          "title" : "7@csentence(20,24)",
-          "id" : "@id",
-          "displayType" : 1
-        },
-        {
-          "url": "/detail/08",
-          // "imgUrl" : "@image(216x148,@color,#FFF,@word)",
-           "imgUrl" : [
-             "http://"+ ip +"/images/news-img2.jpg"
-          ],
-          "time" : "@natural(10,60)" + "分钟前",
-          "title" : "8@csentence(20,24)",
-          "id" : "@id",
-          "displayType" : 1
-        },
-        {
-          "url": "/detail/09",
-          // "imgUrl" : "@image(216x148,@color,#FFF,@word)",
-           "imgUrl" : [
-              "http://"+ ip +"/images/news-img3.jpg"
-          ],
-          "time" : "@natural(10,60)" + "分钟前",
-          "title" : "9@csentence(20,24)",
-          "id" : "@id",
-          "displayType" : 1
-        }
+        "intro": "未达目的地 太空铁达尼4",
+        "grade": "8.54",
+        "watchCount": 3679254,
+        "cinemaCount": 1224,
+      }
+    ],
 
-
-
+    "comingData" : [
+      {
+        "id": 3555,
+        "name": "太空旅客1",
+        "cover": {
+            "origin": "http://"+ ip +"/images/m-img1.jpg"
+        },
+        "intro": "未达目的地 太空铁达尼1",
+        "grade": "8.51",
+        "watchCount": 3679251,
+        "cinemaCount": 1221,
+      },
+      {
+        "id": 3556,
+        "name": "太空旅客2",
+        "cover": {
+            "origin": "http://"+ ip +"/images/m-img1.jpg"
+        },
+        "intro": "未达目的地 太空铁达尼",
+        "grade": "8.52",
+        "watchCount": 3679252,
+        "cinemaCount": 1222,
+      },
+      {
+        "id": 3557,
+        "name": "太空旅客3",
+        "cover": {
+            "origin": "http://"+ ip +"/images/m-img1.jpg"
+        },
+        "intro": "未达目的地 太空铁达尼3",
+        "grade": "8.53",
+        "watchCount": 3679253,
+        "cinemaCount": 1223,
+      },
+      {
+        "id": 3558,
+        "name": "太空旅客4",
+        "cover": {
+            "origin": "http://"+ ip +"/images/m-img1.jpg"
+        },
+        "intro": "未达目的地 太空铁达尼4",
+        "grade": "8.54",
+        "watchCount": 3679254,
+        "cinemaCount": 1224,
+      }
     ]
 
 })

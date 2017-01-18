@@ -1,4 +1,4 @@
-.route-active,.nav-link,.nav a{font-size:0.8rem;display: block;margin:0 auto;width:10rem;height:2.5rem;line-height:2.5rem;
+.route-active,.nav-link,.nav a{font-size:0.7rem;display: block;margin:0 auto;width:10rem;height:2.5rem;line-height:2.5rem;
 background-color: #f4f5f6;color:#000;border-bottom:1px solid #ccc;text-align: center}
 .nav a .iconfont{float:right;font-size:0.6rem;color:#8c8c8c}
 /*路由切换时，导航链接当前样式类*/

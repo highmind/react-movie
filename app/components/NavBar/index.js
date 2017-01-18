@@ -28,13 +28,5 @@ class NavBar extends React.Component{
     }
 
 }
-// <a href="#" className="left-btn">
-//   <Icon type={"icon-caidan01"} />
-// </a>
-// <a href="#" className="right-btn-2">
-//   <Icon type={"icon-sousuo"} />
-// </a>
-// <a href="#" className="right-btn-1">
-//   <Icon type={"icon-user"} />
-// </a>
+
 export default NavBar;

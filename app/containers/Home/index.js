@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import {NewsList, Slider, Loading} from '../../components';
+import {Card, Slider, Loading} from '../../components';
+import {Link} from 'react-router';
 import Axios from 'axios';
 import './index.css';
-//首页页面
+
 class Home extends Component{
     constructor(props){
         super(props);
@@ -10,7 +11,8 @@ class Home extends Component{
         console.log('Main执行getInitialState')
         this.ignoreLastFetch = false;
         this.state = {
-          newslist : [],   //新闻列表数据
+          playingData : [],   //正在上映数据
+          comingData : [],   //即将上映数据
           slider : [],     //轮播图数据
           sliderId : 0,    //轮播图组件id
           loading : true   //loading参数
@@ -27,22 +29,21 @@ class Home extends Component{
         })
 
         let self = this;
-        let url = 'http://mockdata/get/newslist';
-        console.log('Main请求的url为：' + url);
+        let url = 'http://mockdata/get/filmlist';
         Axios.get(url).then(function(res){
             console.log('--------Containers/Main--------');
             console.log('Main获取到的数据为：');
-            console.log(res.data.slider);
+            let data = res.data;
             if(!self.ignoreLastFetch){
                 self.setState({
-                    newslist : res.data.data,
-                    slider : res.data.slider.data,
-                    sliderId : res.data.slider.id,
+                    playingData : data.playingData,
+                    comingData : data.comingData,
+                    slider : data.slider.data,
+                    sliderId : data.slider.id,
                     loading : false
                 })
             }
 
-            console.log(res.data.slider)
             // 设置滚动条位置
             self.setPosition();
         })
@@ -55,7 +56,6 @@ class Home extends Component{
         let scrollTop = document.body.scrollTop;//获取滚动条高度
         let path = this.props.location.pathname;//获取当前的pathname
         let positionData = {"scrollTop" : scrollTop, "path" : this.props.location.pathname};//redux中要存储的数据
-
         this.props.setScroll(positionData);//通过action设置位置信息
     }
 
@@ -64,14 +64,11 @@ class Home extends Component{
         console.log('...setPosition...');
         let posData = this.props.position;//获取store中的滚动条位置信息
         let len = posData.length;         //获取信息数组长度，用于获取最新的位置信息
-        console.log(posData);
         let savePos = 0;                  //初始位置为0
         let savePath = '';                //初始pathname为空
         if(len != 0 ){                    //当位置信息数组不为空的时候，设置位置和pathname
             savePos = posData[len - 1].position.scrollTop;
             savePath = posData[len - 1].position.path;
-            console.log(savePos);
-            console.log(savePath);
         }
 
         let path = this.props.location.pathname; //获取当前pathname
@@ -91,35 +88,52 @@ class Home extends Component{
         console.log('Main执行componentDidMount');
         this.getData('tuijian');
     }
-
-    componentDidUpdate(prevProps) {
-        // 上面步骤3，通过参数更新数据
-        let oldId = prevProps.params.id;
-        console.log('--------Containers/Main--------');
-        console.log('Main执行componentDidUpdate');
-        console.log('oldId ' + oldId);
-        let id = this.props.params.id;
-        console.log('newId ' + id);
-        if (id !== oldId){
-            // 如果路由获取不到参数，获取推荐数据
-            if(typeof(id) == 'undefined'){
-              console.log("id是 " + id + " componetWillReceiveProps");
-              this.getData('tuijian');
-            }
-            // 否则获取相应栏目数据，根据id查询
-            else {
-              console.log('--------Containers/Main--------')
-              console.log("Main执行componentDidUpdate");
-              this.getData(id);
-            }
-        }
-
-    }
+    //
+    // componentDidUpdate(prevProps) {
+    //     // 上面步骤3，通过参数更新数据
+    //     let oldId = prevProps.params.id;
+    //     console.log('--------Containers/Main--------');
+    //     console.log('Main执行componentDidUpdate');
+    //     console.log('oldId ' + oldId);
+    //     let id = this.props.params.id;
+    //     console.log('newId ' + id);
+    //     if (id !== oldId){
+    //         // 如果路由获取不到参数，获取推荐数据
+    //         if(typeof(id) == 'undefined'){
+    //           console.log("id是 " + id + " componetWillReceiveProps");
+    //           this.getData('tuijian');
+    //         }
+    //         // 否则获取相应栏目数据，根据id查询
+    //         else {
+    //           console.log('--------Containers/Main--------')
+    //           console.log("Main执行componentDidUpdate");
+    //           this.getData(id);
+    //         }
+    //     }
+    //
+    // }
 
     componentWillUnmount () {
         // 上面步骤四，在组件移除前忽略正在进行中的请求
         this.ignoreLastFetch = true
         this.savePosition()
+    }
+
+    getFilmList(data){
+      let nodes = data.map(function(dData){
+        return(
+          <Link key={dData.id} to={`/film/${dData.id}`}>
+            <Card key={dData.id} data={dData}/>
+          </Link>
+        )
+      })
+
+      return (
+        <div className="film-list">
+          {nodes}
+        </div>
+      )
+
     }
 
     render(){
@@ -129,7 +143,8 @@ class Home extends Component{
                 <Loading active={this.state.loading} />
                 <div className={this.state.loading ? "con-hide" : "con-show"}>
                     <Slider id={this.state.sliderId} data={this.state.slider} />
-                    <NewsList data={this.state.newslist} />
+                    {this.getFilmList(this.state.playingData)}
+                    {this.getFilmList(this.state.comingData)}
                 </div>
             </div>
         )

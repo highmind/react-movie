@@ -66,10 +66,7 @@ class App extends Component{
         <a className="right-btn-1" href="#">
           <Icon key="0" type="icon-user" />
         </a>,
-        <a className="right-btn-2" href="#">
-          <span className="city">秦皇岛</span>
-          <Icon key="1" type="icon-xiangxiajiantou" />
-        </a>
+        <a className="right-btn-2" href="#"><span className="city">秦皇岛</span><Icon key="1" type="icon-xiangxiajiantou" /></a>
       ];
 
       return(
