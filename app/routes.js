@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Router, Route, IndexRoute, Redirect, hashHistory,browserHistory, applyRouterMiddleware, Link} from 'react-router';
-import {App, Main, Detail} from './containers';
+import {App, Home, Detail} from './containers';
 //
 // const savePosition = router => {
 //     console.log('routes savePosition');
@@ -26,8 +26,8 @@ const goScrollTop = () => {
 
 export default (
     <Route path="/" component={App}>
-        <IndexRoute component={Main} /> //首页
-        <Route path="/index/:id" component={Main} />  //栏目切换
+        <IndexRoute component={Home} /> //首页
+        <Route path="/index/:id" component={Home} />  //栏目切换
         <Route path="/detail/:id" component={Detail} /> //详情页
         <Redirect from='*' to='/' />
     </Route>

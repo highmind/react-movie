@@ -3,7 +3,7 @@ import {NewsList, NavBar, Nav, Slider, Loading, Icon} from '../../components';
 import Axios from 'axios'; //引入axios处理ajax
 import './index.css';
 //首页页面
-class Main extends Component{
+class Home extends Component{
     constructor(props){
         super(props);
         console.log('--------Containers/Main--------')
@@ -154,11 +154,10 @@ class Main extends Component{
       this.setState({
         navActive : !this.state.navActive
       })
-      this.props.navActive(!this.state.navActive)
+      // this.props.navActive(!this.state.navActive)
     }
 
     setNavActive(){
-      console.log('...setNavActive...');
       this.setState({
         navActive : !this.state.navActive
       });
@@ -166,8 +165,6 @@ class Main extends Component{
 
     getNavActive(){
       let data = this.props.navActiveData;
-      console.log('...data...')
-      console.log(data)
       let len = data.length;
       if(len != 0){
         return data[len - 1].navActiveData
@@ -179,9 +176,7 @@ class Main extends Component{
     }
 
     render(){
-        // let active = this.getNavActive();
-        // console.log('...active...')
-        // console.log(active)
+
         // NavBar左侧子组件
         let navBarLeftNode = [
           <a className="left-btn" href="javascript:void(0);" onClick={this.toggleNav}>
@@ -221,4 +216,4 @@ class Main extends Component{
 }
 
 
-export default  Main
+export default  Home

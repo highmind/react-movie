@@ -20,49 +20,24 @@ Mock.mock('http://mockdata/get/detail', 'get', {
 Mock.mock('http://mockdata/get/nav', 'get', {
   "data" : [
         {
-            "link": "/index/tuijian",
-            "name": "\u63a8\u8350",
+            "link": "/",
+            "name": "首页",
             "id": 0
         },
         {
-            "link": "/index/baijia",
-            "name": "\u767e\u5bb6",
+            "link": "/index/film",
+            "name": "影片",
             "id": 1
         },
         {
-            "link": "/index/bendi",
-            "name": "\u672c\u5730",
+            "link": "/index/cinema",
+            "name": "影院",
             "id": 2
         },
         {
-            "link": "/index/baijia2",
-            "name": "\u56fe\u7247",
+            "link": "/index/user",
+            "name": "我的",
             "id": 3
-        },
-        {
-            "link": "/index/baijia3",
-            "name": "\u5a31\u4e50",
-            "id": 4
-        },
-        {
-            "link": "/index/baijia4",
-            "name": "\u793e\u4f1a",
-            "id": 5
-        },
-        {
-            "link": "/index/baijia5",
-            "name": "\u519b\u4e8b",
-            "id": 6
-        },
-        {
-            "link": "/index/baijia6",
-            "name": "\u4e92\u8054\u7f51",
-            "id": 7
-        },
-        {
-            "link": "/index/baijia7",
-            "name": "\u79d1\u6280",
-            "id": 8
         }
     ]
 
