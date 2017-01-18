@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import {NewsList, NavBar, Nav, Slider, Loading, Icon} from '../../components';
-import Axios from 'axios'; //引入axios处理ajax
+import {NewsList, Slider, Loading} from '../../components';
+import Axios from 'axios';
 import './index.css';
 //首页页面
 class Home extends Component{
@@ -15,13 +15,11 @@ class Home extends Component{
           sliderId : 0,    //轮播图组件id
           loading : true   //loading参数
         }
-        // this.props.navActive(false)
-        // this.toggleNav = this.toggleNav.bind(this);
-        // this.setNavActive = this.setNavActive.bind(this);
     }
 
     getData(id){
-        //数据返回之前，重新设置state,因为不同路由使用的一个组件，切换时，需要重置状态
+        //数据返回之前，重新设置state,因为不同路由使用的一个组件，
+        // 切换时，需要重置状态
         this.setState({
           loading : true   //loading参数
         })
@@ -56,8 +54,6 @@ class Home extends Component{
         let path = this.props.location.pathname;//获取当前的pathname
         let positionData = {"scrollTop" : scrollTop, "path" : this.props.location.pathname};//redux中要存储的数据
 
-        this.props.addTodo('this is addTodo' + scrollTop); //测试addTodo
-
         this.props.setScroll(positionData);//通过action设置位置信息
     }
 
@@ -89,11 +85,8 @@ class Home extends Component{
     }
 
     componentDidMount(){
-        // 初始化时，设置导航状态
         console.log('--------Containers/Main--------');
         console.log('Main执行componentDidMount');
-        
-        // 初始化新闻列表数据
         this.getData('tuijian');
     }
 
@@ -125,20 +118,7 @@ class Home extends Component{
         // 上面步骤四，在组件移除前忽略正在进行中的请求
         this.ignoreLastFetch = true
         this.savePosition()
-
     }
-
-    // getNavActive(){
-    //   let data = this.props.navActiveData;
-    //   let len = data.length;
-    //   if(len != 0){
-    //     return data[len - 1].navActiveData
-    //   }
-    //   else{
-    //     return false;
-    //   }
-    //
-    // }
 
     render(){
         return(
