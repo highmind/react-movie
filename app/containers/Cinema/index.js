@@ -3,7 +3,7 @@ import {NewsList, NavBar, Nav, Slider, Loading, Icon} from '../../components';
 import Axios from 'axios'; //引入axios处理ajax
 import './index.css';
 //首页页面
-class Home extends Component{
+class Cinema extends Component{
     constructor(props){
         super(props);
         console.log('--------Containers/Main--------')
@@ -15,9 +15,7 @@ class Home extends Component{
           sliderId : 0,    //轮播图组件id
           loading : true   //loading参数
         }
-        // this.props.navActive(false)
-        // this.toggleNav = this.toggleNav.bind(this);
-        // this.setNavActive = this.setNavActive.bind(this);
+        this.props.navBarSet("全部影院")
     }
 
     getData(id){
@@ -92,7 +90,7 @@ class Home extends Component{
         // 初始化时，设置导航状态
         console.log('--------Containers/Main--------');
         console.log('Main执行componentDidMount');
-        
+
         // 初始化新闻列表数据
         this.getData('tuijian');
     }
@@ -156,4 +154,4 @@ class Home extends Component{
 }
 
 
-export default  Home
+export default  Cinema

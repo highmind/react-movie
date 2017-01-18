@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { ADD_TODO, DELETE_TODO, SCROLL_POSITION, ACTIVE_NAV} from '../actions/actions'
+import { ADD_TODO, DELETE_TODO, SCROLL_POSITION, ACTIVE_NAV, NAVBAR_SET} from '../actions/actions'
 
 function todos(state = [], action) {
   switch (action.type) {
@@ -71,11 +71,27 @@ function navActive(state = [], action){
   }
 }
 
+function navBarSet(state = [], action){
+  switch (action.type) {
+
+    case NAVBAR_SET:
+      return [
+        ...state,
+        {
+          text:action.text
+        }
+      ]
+
+    default:
+      return state
+  }
+}
 
 const rootReducer = combineReducers({
   todos,
   test,
   setScroll,
+  navBarSet,
   navActive
 })
 

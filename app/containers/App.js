@@ -16,6 +16,7 @@ class App extends Component{
             data:[]
         }
         this.toggleNav = this.toggleNav.bind(this);
+        this.getNavBarText = this.getNavBarText.bind(this);
     }
 
     // NavBar按钮点击，切换Nav的显示和隐藏，且用于与Nav组件通信
@@ -43,6 +44,16 @@ class App extends Component{
         }
     }
 
+    getNavBarText(){
+      let textArr = this.props.navBarText;
+      let len = textArr.length;
+      if(len != 0){
+        return textArr[len - 1].text;
+      }else{
+        return "芝麻电影"
+      }
+    }
+
     render(){
       // NavBar左侧子组件
       let navBarLeftNode = [
@@ -63,7 +74,7 @@ class App extends Component{
 
       return(
           <div>
-              <NavBar name="芝麻电影"
+              <NavBar name={this.getNavBarText()}
                 leftContent={[navBarLeftNode]}
                 rightContent={[navBarRightNode]} />
               <Nav data={this.state.nav}
@@ -76,14 +87,12 @@ class App extends Component{
 
 }
 
-// <div>
-//               {this.props.children}
-//           </div>
 function mapStateToProps(state){
     return {
       position: state.setScroll,
       todoList : state.todos,
-      navActiveData : state.navActive
+      navActiveData : state.navActive,
+      navBarText : state.navBarSet
     }
 }
 
