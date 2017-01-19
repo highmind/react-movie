@@ -72,7 +72,7 @@ Mock.mock('http://mockdata/get/filmlist', 'get', {
     "playingData" : [
       {
         "id": 3545,
-        "name": "太空旅客1",
+        "name": "太空旅客",
         "cover": {
             "origin": "http://"+ ip +"/images/m-img1.jpg"
         },
@@ -83,45 +83,45 @@ Mock.mock('http://mockdata/get/filmlist', 'get', {
       },
       {
         "id": 3546,
-        "name": "太空旅客2",
+        "name": "情圣",
         "cover": {
-            "origin": "http://"+ ip +"/images/m-img1.jpg"
+            "origin": "http://"+ ip +"/images/m-img2.jpg"
         },
         "intro": "未达目的地 太空铁达尼",
         "grade": "8.52",
         "watchCount": 3679252,
-        "cinemaCount": 1222,
+        "cinemaCount": 2,
       },
       {
         "id": 3547,
-        "name": "太空旅客3",
+        "name": "星球大战外传：侠盗一号",
         "cover": {
-            "origin": "http://"+ ip +"/images/m-img1.jpg"
+            "origin": "http://"+ ip +"/images/m-img3.jpg"
         },
         "intro": "未达目的地 太空铁达尼3",
         "grade": "8.53",
         "watchCount": 3679253,
-        "cinemaCount": 1223,
+        "cinemaCount": 3,
       },
       {
         "id": 3548,
-        "name": "太空旅客4",
+        "name": "降临",
         "cover": {
-            "origin": "http://"+ ip +"/images/m-img1.jpg"
+            "origin": "http://"+ ip +"/images/m-img4.jpg"
         },
         "intro": "未达目的地 太空铁达尼4",
         "grade": "8.54",
         "watchCount": 3679254,
-        "cinemaCount": 1224,
+        "cinemaCount": 1,
       }
     ],
 
     "comingData" : [
       {
         "id": 3555,
-        "name": "太空旅客1",
+        "name": "西游伏妖篇",
         "cover": {
-            "origin": "http://"+ ip +"/images/m-img1.jpg"
+            "origin": "http://"+ ip +"/images/c-img1.jpg"
         },
         "intro": "未达目的地 太空铁达尼1",
         "grade": "8.51",
@@ -130,9 +130,9 @@ Mock.mock('http://mockdata/get/filmlist', 'get', {
       },
       {
         "id": 3556,
-        "name": "太空旅客2",
+        "name": "功夫瑜伽",
         "cover": {
-            "origin": "http://"+ ip +"/images/m-img1.jpg"
+            "origin": "http://"+ ip +"/images/c-img2.jpg"
         },
         "intro": "未达目的地 太空铁达尼",
         "grade": "8.52",
@@ -141,9 +141,9 @@ Mock.mock('http://mockdata/get/filmlist', 'get', {
       },
       {
         "id": 3557,
-        "name": "太空旅客3",
+        "name": "乘风破浪",
         "cover": {
-            "origin": "http://"+ ip +"/images/m-img1.jpg"
+            "origin": "http://"+ ip +"/images/c-img3.jpg"
         },
         "intro": "未达目的地 太空铁达尼3",
         "grade": "8.53",
@@ -152,9 +152,9 @@ Mock.mock('http://mockdata/get/filmlist', 'get', {
       },
       {
         "id": 3558,
-        "name": "太空旅客4",
+        "name": "大闹天竺",
         "cover": {
-            "origin": "http://"+ ip +"/images/m-img1.jpg"
+            "origin": "http://"+ ip +"/images/c-img4.jpg"
         },
         "intro": "未达目的地 太空铁达尼4",
         "grade": "8.54",
