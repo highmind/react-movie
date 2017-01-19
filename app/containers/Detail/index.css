@@ -1,6 +1,11 @@
-.detail-wrap{width:100%;overflow:hidden;}
-.detail-con{width:17rem;margin:0 auto;overflow:hidden;margin-top:3.35rem;}
-.detail-title{font-size:0.9rem;}
-.detail-bar{padding-bottom:0.3rem;font-size:0.6rem;color:#bdbdbd;margin:0.5rem 0;border-bottom:1px solid #bdbdbd;}
-.detail-text{font-size:0.75rem;line-height:2em;}
-.detail-text p{margin-top:0.6rem;text-indent:2em;}
+.detail-wrap{width:100%;font-size:0.7rem;padding-top:2.5rem;overflow:hidden;}
+.detail-con{width:100%;overflow:hidden;}
+.detail-head{overflow:hidden;position:relative;width:90%;padding:5%;display:flex;display: -webkit-flex;}
+.img-filter{position: absolute;left:0;top:0;width:100%;height:100%;filter: blur(30px);-webkit-filter: blur(30px);background-size: 100% auto;}
+.detail-h-l{position:relative;z-index:1;flex:1;-webkit-flex:1;}
+.detail-h-r{color:#fff;padding-left:1rem;position:relative;z-index:1;flex:2;-webkit-flex:2;}
+.detail-h-r p{margin-top:0.4rem;}
+.detail-title{font-size:0.8rem;}
+.detail-score{color:#ffc600;font-size:0.8rem;font-weight: bold;}
+.detail-main{width:90%;margin:0 auto;margin-top:0.8rem;line-height:1.6em;}
+.detail-main p{padding-top:6px;}

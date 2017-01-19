@@ -2,17 +2,39 @@ import Mock from 'mockjs';
 let ip = '192.168.2.104:8080';
 // 详情页mock数据
 Mock.mock('http://mockdata/get/detail', 'get', {
-  "data" : {
-    "title" : "@csentence(16,24)",
-    "author": "@cword(4)",
-    "imgUrls" : [
-        { "url" : "http://"+ ip +"/images/detail-img1.jpg"},
-        { "url" : "http://"+ ip +"/images/detail-img2.jpg"},
-        { "url" : "http://"+ ip +"/images/detail-img3.jpg"}
-    ],
-    "time" : "@time",
-    "content" : "<p>@cparagraph(8)</p><p>@cparagraph(8)</p><p>@cparagraph(8)</p><p>@cparagraph(8)</p>"
-  }
+    "film": {
+              "id": 3562,
+              "name": "降临",
+              "imageryType": "1",
+              "origin": "http://"+ ip +"/images/m-cover-img1.jpg",
+              "intro": "外星来访客 目地难预测",
+              "synopsis": " 影片由《囚徒》《边境杀手》导演丹尼斯·维伦纽瓦执导，根据星云奖以及雨果奖得主、华裔科幻作家特德·姜的短篇小说《你一生的故事》改编，讲述了外星人飞船来到地球，艾米·亚当斯饰演的语言学家受雇于政府，来与外星人沟通了解它们此行的目的。然而当用外星语言“七肢桶”与这些来客交流时， 她眼前突然浮现了她从出生到死亡、已知或未知的完整一生。杰瑞米·雷纳将饰演一名物理学教授，他与亚当斯饰演的语言学家一同受雇于政府。",            "premiereAt": 1484841600000,
+              "mins": 116,
+              "language": "英语",
+              "director": "丹尼斯·维伦纽瓦",
+              "actors": [
+                  {
+                      "name": "艾米·亚当斯"
+                  },
+                  {
+                      "name": "杰瑞米·雷纳"
+                  },
+                  {
+                      "name": "福里斯特·惠特克"
+                  },
+                  {
+                      "name": "迈克尔·斯图巴"
+                  },
+                  {
+                      "name": "马志"
+                  }
+              ],
+
+              "nation": "美国",
+              "category": "剧情|科幻",
+              "grade": "8.0",
+              "cinemaCount": 1
+          }
 
 })
 
@@ -52,18 +74,18 @@ Mock.mock('http://mockdata/get/filmlist', 'get', {
       "id" : "@id",
       "data":[
         {
-          "url" : "/detail/01",
-          "imgUrl" :  "http://"+ ip +"/images/timg@natural(1, 3).jpg",
+          "url" : "/film/01",
+          "imgUrl" :  "http://"+ ip +"/images/timg1.jpg",
           "id":"@id"
         },
         {
-          "url" : "/detail/02",
-          "imgUrl" :  "http://"+ ip +"/images/timg@natural(1, 3).jpg",
+          "url" : "/film/02",
+          "imgUrl" :  "http://"+ ip +"/images/timg2.jpg",
            "id":"@id"
         },
         {
-          "url" : "/detail/03",
-          "imgUrl" :  "http://"+ ip +"/images/timg@natural(1, 3).jpg",
+          "url" : "/film/03",
+          "imgUrl" :  "http://"+ ip +"/images/timg3.jpg",
            "id":"@id"
         }
       ]

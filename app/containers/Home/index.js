@@ -137,8 +137,8 @@ class Home extends Component{
     }
 
     render(){
+        console.log('home')
         return(
-
             <div className="main-con">
                 <Loading active={this.state.loading} />
                 <div className={this.state.loading ? "con-hide" : "con-show"}>

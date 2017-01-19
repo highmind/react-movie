@@ -3,13 +3,9 @@ import { Link } from 'react-router';
 // import Carousel from 'nuka-carousel';
 import { Carousel  } from 'antd-mobile';
 import './index.css';
-//配置按钮和dots的显示和隐藏
-// const noDots = Carousel.getDefaultProps().decorators.slice(2, 3);
-// console.log(Carousel.getDefaultProps())
 class Slider extends React.Component{
     constructor(props){
         super(props);
-        // 相当于ES5 getInitalState
         this.state={
 
         }

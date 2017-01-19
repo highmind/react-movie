@@ -57,9 +57,9 @@ class App extends Component{
     render(){
       // NavBar左侧子组件
       let navBarLeftNode = [
-        <a className="left-btn" href="javascript:void(0);" onClick={this.toggleNav}>
+        <span className="left-btn"  onClick={this.toggleNav}>
           <Icon key="2" type="icon-caidan01" />
-        </a>
+        </span>
       ];
       // NavBar右侧子组件
       let navBarRightNode = [
@@ -88,7 +88,6 @@ function mapStateToProps(state){
     return {
       position: state.setScroll,
       todoList : state.todos,
-      navActiveData : state.navActive,
       navBarText : state.navBarSet
     }
 }

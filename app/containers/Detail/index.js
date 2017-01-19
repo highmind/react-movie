@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
 import Axios from 'axios'; //引入axios处理ajax
-import {NavBar, Loading, NewsListView} from '../../components';
+import {Loading} from '../../components';
 import './index.css';
 class Detail extends Component{
     constructor(props){
         super(props);
-        console.log('--------Container/Detail--------');
-        console.log('执行getInitialState');
         this.state = {
-            data : [],
-            imgUrls : [],
+            data : {},
+            actor: [],
             loading : true
         }
     }
@@ -17,55 +15,71 @@ class Detail extends Component{
     getData(id){
         let self = this;
         let url = 'http://mockdata/get/detail';
-        console.log('--------Container/Detail--------');
-        console.log('请求的url为：' + url);
         Axios.get(url).then(function(res){
-            let resData = res.data;
-            console.log('--------Container/Detail--------');
-            console.log('详情页面获取到的数据为：');
-            console.log(resData);
-
+            let filmData = res.data.film;
             self.setState({
-                data : resData.data,
-                imgUrls : resData.data.imgUrls,
+                data : filmData,
+                actor: filmData.actors,
                 loading : false
             })
+
+            self.props.navBarSet(filmData.name)
         })
         window.scrollTo(0, 0);
     }
 
     componentDidMount(){
-        console.log('--------Container/Detail--------');
-        console.log('执行componentDidMount')
         // 初始化数据
         let id = this.props.params.id;
-        console.log('详情页获取到的传值id: '+ id)
         this.getData(id);
     }
 
+    getActor(data){
+       let tmpStr = '';
+       data.map(function(dData, index){
+         if(index == 0){
+           tmpStr += ' ' + dData.name;
+         }
+         else{
+           tmpStr += ' / ' + dData.name;
+         }
+       })
+       return tmpStr;
+    }
 
     render(){
-        // 图片数据为数组，生成图片节点
-        let imgNodes = this.state.imgUrls.map(function(data){
-            return (
-                <img width="100%" src={data.url} key={data.id} alt="" />
-            )
-        })
-
+        const data = this.state.data;
+        const detailHeadstyle = {backgroundImage: `url(${data.origin})`};
         return(
-
             <div className="detail-wrap">
-                <NewsListView />
                 <Loading active={this.state.loading} />
                 <div className={this.state.loading ? "con-hide" : "con-show"}>
                     <div className="detail-con">
-                        <h4 className="detail-title">{this.state.data.title}</h4>
-                        <div className="detail-bar">
-                            <span className="detail-author">{this.state.data.author}</span>
-                            &nbsp;<span className="detail-time">{this.state.data.time}</span>
+
+                        <div className="detail-head">
+                          <div className="img-filter" style={detailHeadstyle}></div>
+                          <div className="detail-h-l">
+                            <img width="100%" src={data.origin} alt=""/>
+                          </div>
+                          <div className="detail-h-r">
+                            <p className="detail-title">{data.name}</p>
+                            <p>{data.intro}</p>
+                            <p className="detail-score">{data.grade}分</p>
+                            <p>{data.category}</p>
+                            <p>{data.nation}/{data.mins}分钟</p>
+                          </div>
                         </div>
-                        {imgNodes}
-                        <div className="detail-text" dangerouslySetInnerHTML={{__html:this.state.data.content}}></div>
+
+                        <div className="detail-main">
+                          <p>
+                            <span>演职人员</span>
+                            {this.getActor(this.state.actor)}
+
+                          </p>
+                          <p>{data.synopsis}</p>
+                        </div>
+
+
                     </div>
                 </div>
             </div>
