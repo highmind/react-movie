@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import Axios from 'axios'; //引入axios处理ajax
 import {Loading} from '../../components';
+// 只使用一个组件
+// import Button from 'antd-mobile/lib/button'
+// import 'antd-mobile/lib/button/style/index.css'
+import {Button} from 'antd-mobile';// 整个引入
 import './index.css';
 class Detail extends Component{
     constructor(props){
@@ -69,7 +73,14 @@ class Detail extends Component{
                             <p>{data.nation}/{data.mins}分钟</p>
                           </div>
                         </div>
-
+                        <div className="pay-btn-wrap">
+                          <Button
+                            className="pay-btn" size="small"
+                            type="primary"
+                            activeStyle={{ backgroundColor: '#d84c4c' }}>
+                            立即购票
+                          </Button>
+                        </div>
                         <div className="detail-main">
                           <p>
                             <span>演职人员</span>

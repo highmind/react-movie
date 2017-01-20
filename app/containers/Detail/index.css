@@ -9,3 +9,6 @@
 .detail-score{color:#ffc600;font-size:0.8rem;font-weight: bold;}
 .detail-main{width:90%;margin:0 auto;margin-top:0.8rem;line-height:1.6em;}
 .detail-main p{padding-top:6px;}
+.pay-btn-wrap{width:90%;margin:0 auto;margin-top:0.5rem;}
+.pay-btn{font-size:0.8rem;line-height:1.2rem;height:1.8rem;background-color: #d43d3d;
+    border: 1px solid #d43d3d;}
