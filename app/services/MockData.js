@@ -149,6 +149,7 @@ Mock.mock('http://mockdata/get/filmlist', 'get', {
         "grade": "8.51",
         "watchCount": 3679251,
         "cinemaCount": 1221,
+        "showTime":"1月21日"
       },
       {
         "id": 3556,
@@ -160,6 +161,7 @@ Mock.mock('http://mockdata/get/filmlist', 'get', {
         "grade": "8.52",
         "watchCount": 3679252,
         "cinemaCount": 1222,
+        "showTime":"1月21日"
       },
       {
         "id": 3557,
@@ -171,6 +173,7 @@ Mock.mock('http://mockdata/get/filmlist', 'get', {
         "grade": "8.53",
         "watchCount": 3679253,
         "cinemaCount": 1223,
+        "showTime":"1月21日"
       },
       {
         "id": 3558,
@@ -182,6 +185,7 @@ Mock.mock('http://mockdata/get/filmlist', 'get', {
         "grade": "8.54",
         "watchCount": 3679254,
         "cinemaCount": 1224,
+        "showTime":"1月21日"
       }
     ]
 

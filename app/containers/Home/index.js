@@ -121,9 +121,45 @@ class Home extends Component{
 
     getFilmList(data){
       let nodes = data.map(function(dData){
+        let nowPlayingNode = <div className="card-c">
+          <div className="card-l">
+            <h4 className="card-title">{dData.name}</h4>
+            <p className="card-text">
+              {dData.cinemaCount}家影院上映 {dData.watchCount}人购票
+            </p>
+          </div>
+          <div className="card-r">
+            <span className="card-score">{dData.grade}</span>
+          </div>
+        </div>;
         return(
           <Link key={dData.id} to={`/film/${dData.id}`}>
-            <Card key={dData.id} data={dData}/>
+            <Card key={dData.id} data={dData} cardFooter={nowPlayingNode}/>
+          </Link>
+        )
+      })
+
+      return (
+        <div className="film-list">
+          {nodes}
+        </div>
+      )
+
+    }
+
+    getCommingFilmList(data){
+      let nodes = data.map(function(dData){
+        let nowPlayingNode = <div className="card-c">
+          <div className="card-l">
+            <h4 className="card-title">{dData.name}</h4>
+          </div>
+          <div className="card-r">
+            <span className="card-time">{dData.showTime}上映</span>
+          </div>
+        </div>;
+        return(
+          <Link key={dData.id} to={`/film/${dData.id}`}>
+            <Card key={dData.id} data={dData} cardFooter={nowPlayingNode}/>
           </Link>
         )
       })
@@ -137,14 +173,15 @@ class Home extends Component{
     }
 
     render(){
-        console.log('home')
+
+
         return(
             <div className="main-con">
                 <Loading active={this.state.loading} />
                 <div className={this.state.loading ? "con-hide" : "con-show"}>
                     <Slider id={this.state.sliderId} data={this.state.slider} />
                     {this.getFilmList(this.state.playingData)}
-                    {this.getFilmList(this.state.comingData)}
+                    {this.getCommingFilmList(this.state.comingData)}
                 </div>
             </div>
         )

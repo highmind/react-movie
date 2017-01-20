@@ -2,7 +2,8 @@
 .card-img{display: block;width: 100%;}
 .card-c{padding:0.5rem 1rem;background-color: #fff;display: flex;display: -webkit-flex;}
 .card-l{flex:3;-webkit-flex:3;}
-.card-r{flex:1;-webkit-flex:1;text-align: right;}
+.card-r{flex:1;-webkit-flex:2;text-align: right;}
 .card-title{margin:6px 0;}
 .card-text{color:#999}
 .card-score{font-size:1rem;color:#f78360;display:block;height:2rem;line-height:2rem;}
+.card-time{font-size:0.7rem;color:#f78360;display:block;height:2rem;line-height:2rem;}
