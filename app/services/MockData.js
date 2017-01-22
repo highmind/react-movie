@@ -101,7 +101,7 @@ Mock.mock('http://mockdata/get/filmlist', 'get', {
         "intro": "未达目的地 太空铁达尼1",
         "grade": "8.51",
         "watchCount": 3679251,
-        "cinemaCount": 1221,
+        "cinemaCount": 12,
       },
       {
         "id": 3546,
@@ -149,7 +149,7 @@ Mock.mock('http://mockdata/get/filmlist', 'get', {
         "grade": "8.51",
         "watchCount": 3679251,
         "cinemaCount": 1221,
-        "showTime":"1月21日"
+        "showTime":"12月31日"
       },
       {
         "id": 3556,

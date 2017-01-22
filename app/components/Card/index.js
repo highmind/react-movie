@@ -9,12 +9,18 @@ class Card extends Component{
     }
 
     render(){
-        let {data, cardFooter} = this.props;
-        console.log(cardFooter)
+        let {data, cardFooterLeft, cardFooterRight} = this.props;
         return (
           <div className="card">
               <img className="card-img" src={data.cover.origin} alt=""/>
-              {cardFooter}
+                <div className="card-c">
+                  <div className="card-l">
+                    {cardFooterLeft}
+                  </div>
+                  <div className="card-r">
+                    {cardFooterRight}
+                  </div>
+                </div>
           </div>
         )
     }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Card, Slider, Loading} from '../../components';
+import {Card, Slider, Loading, Button} from '../../components';
 import {Link} from 'react-router';
 import Axios from 'axios';
 import './index.css';
@@ -121,20 +121,21 @@ class Home extends Component{
 
     getFilmList(data){
       let nodes = data.map(function(dData){
-        let nowPlayingNode = <div className="card-c">
-          <div className="card-l">
-            <h4 className="card-title">{dData.name}</h4>
-            <p className="card-text">
-              {dData.cinemaCount}家影院上映 {dData.watchCount}人购票
-            </p>
-          </div>
-          <div className="card-r">
-            <span className="card-score">{dData.grade}</span>
-          </div>
+        let cardFLNode = <div>
+          <h4 className="card-title">{dData.name}</h4>
+          <p className="card-text">
+            {dData.cinemaCount}家影院上映 {dData.watchCount}人购票
+          </p>
         </div>;
+        let cardFRNode = <span className="card-score">{dData.grade}</span>;
         return(
           <Link key={dData.id} to={`/film/${dData.id}`}>
-            <Card key={dData.id} data={dData} cardFooter={nowPlayingNode}/>
+            <Card
+              key={dData.id}
+              data={dData}
+              cardFooterLeft={cardFLNode}
+              cardFooterRight={cardFRNode}
+            />
           </Link>
         )
       })
@@ -149,17 +150,16 @@ class Home extends Component{
 
     getCommingFilmList(data){
       let nodes = data.map(function(dData){
-        let nowPlayingNode = <div className="card-c">
-          <div className="card-l">
-            <h4 className="card-title">{dData.name}</h4>
-          </div>
-          <div className="card-r">
-            <span className="card-time">{dData.showTime}上映</span>
-          </div>
-        </div>;
+        let cardFLNode = <h4 className="card-title2">{dData.name}</h4>;
+        let cardFRNode = <span className="card-time">{dData.showTime}上映</span>;
         return(
           <Link key={dData.id} to={`/film/${dData.id}`}>
-            <Card key={dData.id} data={dData} cardFooter={nowPlayingNode}/>
+            <Card
+              key={dData.id}
+              data={dData}
+              cardFooterLeft={cardFLNode}
+              cardFooterRight={cardFRNode}
+            />
           </Link>
         )
       })
@@ -173,15 +173,19 @@ class Home extends Component{
     }
 
     render(){
-
-
         return(
             <div className="main-con">
                 <Loading active={this.state.loading} />
                 <div className={this.state.loading ? "con-hide" : "con-show"}>
                     <Slider id={this.state.sliderId} data={this.state.slider} />
                     {this.getFilmList(this.state.playingData)}
+                    <Link to="/filmlist/nowplaying">
+                      <Button clsName="home-more" isPlain>更多热映电影</Button>
+                    </Link>
                     {this.getCommingFilmList(this.state.comingData)}
+                    <Link to="/filmlist/coming">
+                      <Button clsName="home-more" isPlain>更多即将上映电影</Button>
+                    </Link>
                 </div>
             </div>
         )

@@ -1,9 +1,10 @@
 .card{width:100%;overflow:hidden;font-size:0.7rem;margin-top:1rem;box-shadow:0 0 4px #ccc;}
 .card-img{display: block;width: 100%;}
-.card-c{padding:0.5rem 1rem;background-color: #fff;display: flex;display: -webkit-flex;}
-.card-l{flex:3;-webkit-flex:3;}
-.card-r{flex:1;-webkit-flex:2;text-align: right;}
+.card-c{padding:0.5rem 0.8rem;background-color: #fff;display: flex;display: -webkit-flex;}
+.card-l{flex:4;-webkit-flex:4;}
+.card-r{flex:2;-webkit-flex:2;text-align: right;}
 .card-title{margin:6px 0;}
+.card-title2{height:2rem;line-height:2rem;}
 .card-text{color:#999}
 .card-score{font-size:1rem;color:#f78360;display:block;height:2rem;line-height:2rem;}
 .card-time{font-size:0.7rem;color:#f78360;display:block;height:2rem;line-height:2rem;}
