@@ -7,8 +7,6 @@ import './index.css';
 class Home extends Component{
     constructor(props){
         super(props);
-        console.log('--------Containers/Main--------')
-        console.log('Main执行getInitialState')
         this.ignoreLastFetch = false;
         this.state = {
           playingData : [],   //正在上映数据
@@ -17,7 +15,6 @@ class Home extends Component{
           sliderId : 0,    //轮播图组件id
           loading : true   //loading参数
         }
-
         this.props.navBarSet("芝麻电影")
     }
 
@@ -29,10 +26,9 @@ class Home extends Component{
         })
 
         let self = this;
-        let url = 'http://mockdata/get/filmlist';
+        let url = 'http://mockdata/filmlist';
         Axios.get(url).then(function(res){
-            console.log('--------Containers/Main--------');
-            console.log('Main获取到的数据为：');
+            console.log('--------Containers/Home--------');
             let data = res.data;
             if(!self.ignoreLastFetch){
                 self.setState({
@@ -84,8 +80,7 @@ class Home extends Component{
     }
 
     componentDidMount(){
-        console.log('--------Containers/Main--------');
-        console.log('Main执行componentDidMount');
+        console.log('--------Containers/Home---componentDidMount--------');
         this.getData('tuijian');
     }
     //
@@ -192,6 +187,5 @@ class Home extends Component{
     }
 
 }
-
 
 export default  Home

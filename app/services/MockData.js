@@ -1,7 +1,7 @@
 import Mock from 'mockjs';
 let ip = 'localhost:8080';
 // 详情页mock数据
-Mock.mock('http://mockdata/get/detail', 'get', {
+Mock.mock('http://mockdata/detail', 'get', {
     "film": {
               "id": 3562,
               "name": "降临",
@@ -39,7 +39,7 @@ Mock.mock('http://mockdata/get/detail', 'get', {
 })
 
 //导航mock数据
-Mock.mock('http://mockdata/get/nav', 'get', {
+Mock.mock('http://mockdata/nav', 'get', {
   "data" : [
         {
             "link": "/",
@@ -47,7 +47,7 @@ Mock.mock('http://mockdata/get/nav', 'get', {
             "id": 0
         },
         {
-            "link": "/film",
+            "link": "/filmlist/nowplaying",
             "name": "影片",
             "id": 1
         },
@@ -69,7 +69,7 @@ Mock.mock('http://mockdata/get/nav', 'get', {
 
 
 //Home组件 电影列表数据 browserHistory
-Mock.mock('http://mockdata/get/filmlist', 'get', {
+Mock.mock('http://mockdata/filmlist', 'get', {
     "slider" :{
       "id" : "@id",
       "data":[

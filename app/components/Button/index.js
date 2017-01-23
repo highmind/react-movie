@@ -7,7 +7,7 @@ class Button extends Component{
 
   static defaultProps = { //默认属性设置
     clsName : '', //用于自定义class
-    type : 'default', //type不设的时候的class
+    type : 'default', //type不设的时候的class,primary || warning
     disabled : false,  //按钮
     isPlain : false   //是否是空心按钮
   }

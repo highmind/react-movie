@@ -18,7 +18,7 @@ class Detail extends Component{
 
     getData(id){
         let self = this;
-        let url = 'http://mockdata/get/detail';
+        let url = 'http://mockdata/detail';
         Axios.get(url).then(function(res){
             let filmData = res.data.film;
             self.setState({
@@ -77,17 +77,14 @@ class Detail extends Component{
                           <Button clsName="pay-btn">
                             立即购票
                           </Button>
-
                         </div>
                         <div className="detail-main">
                           <p>
                             <span>演职人员</span>
                             {this.getActor(this.state.actor)}
-
                           </p>
                           <p>{data.synopsis}</p>
                         </div>
-
 
                     </div>
                 </div>

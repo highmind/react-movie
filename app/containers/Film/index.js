@@ -26,7 +26,7 @@ class Film extends Component{
         })
 
         let self = this;
-        let url = 'http://mockdata/get/newslist';
+        let url = 'http://mockdata/filmlist';
         console.log('Main请求的url为：' + url);
         Axios.get(url).then(function(res){
             console.log('--------Containers/Main--------');
@@ -126,18 +126,6 @@ class Film extends Component{
         this.savePosition()
 
     }
-
-    // getNavActive(){
-    //   let data = this.props.navActiveData;
-    //   let len = data.length;
-    //   if(len != 0){
-    //     return data[len - 1].navActiveData
-    //   }
-    //   else{
-    //     return false;
-    //   }
-    //
-    // }
 
     render(){
         return(

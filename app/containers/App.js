@@ -30,7 +30,7 @@ class App extends Component{
         console.log('-------App--------')
         console.log('主容器App执行componentDidMount')
         // 初始化导航数据
-        let url = 'http://mockdata/get/nav';
+        let url = 'http://mockdata/nav';
         let self = this;
         let NavData = localStorage.getItem('NavData');
         // 如果导航数据在本地存在，则不请求远程数据
