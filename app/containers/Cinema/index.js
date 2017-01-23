@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {NewsList, NavBar, Nav, Slider, Loading, Icon} from '../../components';
+import {List, NavBar, Nav, Slider, Loading, Icon} from '../../components';
 import Axios from 'axios'; //引入axios处理ajax
 import './index.css';
 //首页页面
@@ -145,7 +145,7 @@ class Cinema extends Component{
                 <Loading active={this.state.loading} />
                 <div className={this.state.loading ? "con-hide" : "con-show"}>
                     <Slider id={this.state.sliderId} data={this.state.slider} />
-                    <NewsList data={this.state.newslist} />
+                    <List data={this.state.newslist} />
                 </div>
             </div>
         )

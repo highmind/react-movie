@@ -46,7 +46,6 @@ class Home extends Component{
 
     }
 
-
     savePosition() {
         console.log('...savePosition...');
         let scrollTop = document.body.scrollTop;//获取滚动条高度

@@ -81,7 +81,7 @@ Mock.mock('http://mockdata/filmlist', 'get', {
         {
           "url" : "/film/02",
           "imgUrl" :  "http://"+ ip +"/images/timg2.jpg",
-           "id":"@id"
+          "id":"@id"
         },
         {
           "url" : "/film/03",
@@ -190,6 +190,219 @@ Mock.mock('http://mockdata/filmlist', 'get', {
     ]
 
 })
+
+
+//playing电影数据
+Mock.mock('http://mockdata/playing?page=0&count=6', 'get', {
+    "data" : [
+      {
+        "id": 3545,
+        "name": "太空旅客",
+        "cover": {
+            "origin": "http://"+ ip +"/images/m-img1.jpg"
+        },
+        "intro": "未达目的地 太空铁达尼1",
+        "grade": "8.51",
+        "watchCount": 3679251,
+        "cinemaCount": 12,
+      },
+      {
+        "id": 3546,
+        "name": "情圣",
+        "cover": {
+            "origin": "http://"+ ip +"/images/m-img2.jpg"
+        },
+        "intro": "未达目的地 太空铁达尼",
+        "grade": "8.52",
+        "watchCount": 3679252,
+        "cinemaCount": 2,
+      },
+      {
+        "id": 3547,
+        "name": "星球大战外传：侠盗一号",
+        "cover": {
+            "origin": "http://"+ ip +"/images/m-img3.jpg"
+        },
+        "intro": "未达目的地 太空铁达尼3",
+        "grade": "8.53",
+        "watchCount": 3679253,
+        "cinemaCount": 3,
+      },
+      {
+        "id": 3548,
+        "name": "降临",
+        "cover": {
+            "origin": "http://"+ ip +"/images/m-img4.jpg"
+        },
+        "intro": "未达目的地 太空铁达尼4",
+        "grade": "8.54",
+        "watchCount": 3679254,
+        "cinemaCount": 1,
+      }
+    ]
+})
+
+//coming电影数据
+Mock.mock('http://mockdata/coming?page=0&count=6', 'get', {
+    "data" : [
+      {
+        "id": 3555,
+        "name": "西游伏妖篇",
+        "cover": {
+            "origin": "http://"+ ip +"/images/c-img1.jpg"
+        },
+        "intro": "未达目的地 太空铁达尼",
+        "grade": "8.51",
+        "watchCount": 3679251,
+        "cinemaCount": 1221,
+        "showTime":"12月31日"
+      },
+      {
+        "id": 3556,
+        "name": "功夫瑜伽",
+        "cover": {
+            "origin": "http://"+ ip +"/images/c-img2.jpg"
+        },
+        "intro": "未达目的地 太空铁达尼",
+        "grade": "8.52",
+        "watchCount": 3679252,
+        "cinemaCount": 1222,
+        "showTime":"1月21日"
+      },
+      {
+        "id": 3557,
+        "name": "乘风破浪",
+        "cover": {
+            "origin": "http://"+ ip +"/images/c-img3.jpg"
+        },
+        "intro": "未达目的地 太空铁达尼",
+        "grade": "8.53",
+        "watchCount": 3679253,
+        "cinemaCount": 1223,
+        "showTime":"1月21日"
+      },
+      {
+        "id": 3558,
+        "name": "大闹天竺",
+        "cover": {
+            "origin": "http://"+ ip +"/images/c-img4.jpg"
+        },
+        "intro": "未达目的地 太空铁达尼",
+        "grade": "8.54",
+        "watchCount": 3679254,
+        "cinemaCount": 1224,
+        "showTime":"1月21日"
+      }
+    ]
+
+})
+
+//playing电影列表分页数据，使用随机数据
+Mock.mock('http://mockdata/playing?page=2&count=6', 'get', {
+    "data" : [
+      {
+        "id": "@id",
+        "name": "太空旅客",
+        "cover": {
+            "origin": "http://"+ ip +"/images/m-img1.jpg"
+        },
+        "intro": "@csentence(16,24)-playing",
+        "grade": "8.51",
+        "watchCount": 3679251,
+        "cinemaCount": 12,
+      },
+      {
+        "id": "@id",
+        "name": "情圣",
+        "cover": {
+            "origin": "http://"+ ip +"/images/m-img2.jpg"
+        },
+        "intro": "@csentence(16,24)-playing",
+        "grade": "8.52",
+        "watchCount": 3679252,
+        "cinemaCount": 2,
+      },
+      {
+        "id": "@id",
+        "name": "星球大战外传：侠盗一号",
+        "cover": {
+            "origin": "http://"+ ip +"/images/m-img3.jpg"
+        },
+        "intro": "@csentence(16,24)-playing",
+        "grade": "8.53",
+        "watchCount": 3679253,
+        "cinemaCount": 3,
+      },
+      {
+        "id": "@id",
+        "name": "降临",
+        "cover": {
+            "origin": "http://"+ ip +"/images/m-img4.jpg"
+        },
+        "intro": "@csentence(16,24)-playing",
+        "grade": "8.54",
+        "watchCount": 3679254,
+        "cinemaCount": 1,
+      }
+    ]
+})
+
+
+//coming电影分页数据,使用随机数据
+Mock.mock('http://mockdata/coming?page=2&count=6', 'get', {
+    "data" : [
+      {
+        "id": "@id",
+        "name": "西游伏妖篇",
+        "cover": {
+            "origin": "http://"+ ip +"/images/c-img1.jpg"
+        },
+        "intro": "@csentence(16,24)-coming",
+        "grade": "8.51",
+        "watchCount": 3679251,
+        "cinemaCount": 1221,
+        "showTime":"12月31日"
+      },
+      {
+        "id": "@id",
+        "name": "功夫瑜伽",
+        "cover": {
+            "origin": "http://"+ ip +"/images/c-img2.jpg"
+        },
+        "intro": "@csentence(16,24)-coming",
+        "grade": "8.52",
+        "watchCount": 3679252,
+        "cinemaCount": 1222,
+        "showTime":"1月21日"
+      },
+      {
+        "id": "@id",
+        "name": "乘风破浪",
+        "cover": {
+            "origin": "http://"+ ip +"/images/c-img3.jpg"
+        },
+        "intro": "@csentence(16,24)-coming",
+        "grade": "8.53",
+        "watchCount": 3679253,
+        "cinemaCount": 1223,
+        "showTime":"1月21日"
+      },
+      {
+        "id": "@id",
+        "name": "大闹天竺",
+        "cover": {
+            "origin": "http://"+ ip +"/images/c-img4.jpg"
+        },
+        "intro": "@csentence(16,24)-coming",
+        "grade": "8.54",
+        "watchCount": 3679254,
+        "cinemaCount": 1224,
+        "showTime":"1月21日"
+      }
+    ]
+
+})
+
 
 // 设置数据延迟时间，模拟loading
 Mock.setup({

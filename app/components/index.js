@@ -1,6 +1,6 @@
 export { default as NavBar} from './NavBar'
 export { default as Nav} from './Nav'
-export { default as NewsList} from './NewsList'
+export { default as List} from './List'
 export { default as Loading} from './Loading'
 export { default as Slider} from './Slider'
 export { default as NewsListView} from './NewsListView'

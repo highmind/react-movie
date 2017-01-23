@@ -8,6 +8,8 @@ html{font-size:20px;}
 html, body {
   -webkit-tap-highlight-color: transparent;
 }
-
+/*公共样式*/
 .con-hide{display: none;}
 .con-show{display: block;}
+.home-more{font-size:0.6rem;height:1.6rem;line-height:1.6rem;
+  display: block;margin:1rem auto;width:40%;color: #616161;border-radius:14px;border: 1px solid #aaa;}
