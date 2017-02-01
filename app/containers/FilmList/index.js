@@ -12,7 +12,8 @@ class FilmList extends Component{
           filmlist : [],   //新闻列表数据
           page : 0,
           count: 4,
-          loading : true   //loading参数
+          loading : true,   //loading参数
+          bottomLoading : false
         }
         this.props.navBarSet("全部影片");
         this.handleClick = this.handleClick.bind(this);
@@ -78,6 +79,9 @@ class FilmList extends Component{
 
     handleClick(){
       let self = this;
+      this.setState({
+        bottomLoading : true   //loading参数
+      })
       // 正常数据情况下
       // let page = this.state.page++;
       // let url = 'http://mockdata/' + this.state.type +
@@ -91,7 +95,7 @@ class FilmList extends Component{
           if(!self.ignoreLastFetch){
               self.setState({
                   filmlist : data,
-                  loading : false
+                  bottomLoading : false
               })
           };
       })
@@ -143,6 +147,7 @@ class FilmList extends Component{
                 <div className={this.state.loading ? "con-hide" : "con-show"}>
                     <List data={this.state.filmlist} />
                 </div>
+                <Loading active={this.state.bottomLoading} />
                 <Button clsName="home-more" isPlain clickEvent={this.handleClick}>查看更多</Button>
             </div>
         )

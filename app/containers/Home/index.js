@@ -173,7 +173,7 @@ class Home extends Component{
                 <div className={this.state.loading ? "con-hide" : "con-show"}>
                     <Slider id={this.state.sliderId} data={this.state.slider} />
                     {this.getFilmList(this.state.playingData)}
-                    <Link to="/filmlist/nowplaying">
+                    <Link to="/filmlist/playing">
                       <Button clsName="home-more" isPlain>更多热映电影</Button>
                     </Link>
                     {this.getCommingFilmList(this.state.comingData)}
