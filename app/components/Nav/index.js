@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Link, IndexLink} from 'react-router';
 import NavLink from './NavLink';
-import IcoLink from '../IcoLink';
 import './index.css';
 class Nav extends React.Component{
     constructor(props){

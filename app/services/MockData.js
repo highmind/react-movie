@@ -47,7 +47,7 @@ Mock.mock('http://mockdata/nav', 'get', {
             "id": 0
         },
         {
-            "link": "/filmlist/nowplaying",
+            "link": "/filmlist/playing",
             "name": "影片",
             "id": 1
         },
@@ -193,7 +193,7 @@ Mock.mock('http://mockdata/filmlist', 'get', {
 
 
 //playing电影数据
-Mock.mock('http://mockdata/playing?page=0&count=6', 'get', {
+Mock.mock('http://mockdata/playing?page=0&count=4', 'get', {
     "data" : [
       {
         "id": 3545,
@@ -243,7 +243,7 @@ Mock.mock('http://mockdata/playing?page=0&count=6', 'get', {
 })
 
 //coming电影数据
-Mock.mock('http://mockdata/coming?page=0&count=6', 'get', {
+Mock.mock('http://mockdata/coming?page=0&count=4', 'get', {
     "data" : [
       {
         "id": 3555,
@@ -298,7 +298,7 @@ Mock.mock('http://mockdata/coming?page=0&count=6', 'get', {
 })
 
 //playing电影列表分页数据，使用随机数据
-Mock.mock('http://mockdata/playing?page=2&count=6', 'get', {
+Mock.mock('http://mockdata/playing?page=2&count=4', 'get', {
     "data" : [
       {
         "id": "@id",
@@ -349,7 +349,7 @@ Mock.mock('http://mockdata/playing?page=2&count=6', 'get', {
 
 
 //coming电影分页数据,使用随机数据
-Mock.mock('http://mockdata/coming?page=2&count=6', 'get', {
+Mock.mock('http://mockdata/coming?page=2&count=4', 'get', {
     "data" : [
       {
         "id": "@id",

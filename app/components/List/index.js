@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Item from '../Item';
+//电影分类页面 类别
 class List extends Component{
     constructor(props){
         super(props);

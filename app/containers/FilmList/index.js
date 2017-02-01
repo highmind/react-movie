@@ -11,14 +11,14 @@ class FilmList extends Component{
         this.state = {
           filmlist : [],   //新闻列表数据
           page : 0,
-          count: 6,
-          type:'playing',
+          count: 4,
           loading : true   //loading参数
         }
         this.props.navBarSet("全部影片");
         this.handleClick = this.handleClick.bind(this);
     }
 
+    // type 为通过url传的参数
     getData(type){
         //数据返回之前，重新设置state,因为不同路由使用的一个组件，切换时，需要重置状态
         this.setState({
@@ -27,7 +27,7 @@ class FilmList extends Component{
 
         let self = this;
         let url = 'http://mockdata/' +
-        this.state.type +
+        type +
         '?page='+ this.state.page+'&count=' + this.state.count;
         Axios.get(url).then(function(res){
             if(!self.ignoreLastFetch){
@@ -74,7 +74,6 @@ class FilmList extends Component{
         else{                                   //否则滚动到顶部
           window.scrollTo(0, 0);
         }
-
     }
 
     handleClick(){
@@ -84,10 +83,10 @@ class FilmList extends Component{
       // let url = 'http://mockdata/' + this.state.type +
       // '?page='+ this.state.page+'&count=' + this.state.count;
       // mock数据情况下
-     let url = 'http://mockdata/' + this.state.type +
+      let url = 'http://mockdata/' + this.props.params.type +
       '?page='+ 2 +'&count=' + this.state.count;
       Axios.get(url).then(function(res){
-          let data = [...self.state.filmlist, ...res.data.data];
+          let data = [...self.state.filmlist, ...res.data.data]; //两个数组合并为一个数组
           console.log(data)
           if(!self.ignoreLastFetch){
               self.setState({
@@ -99,7 +98,7 @@ class FilmList extends Component{
     }
 
     componentDidMount(){
-        this.getData(this.state.type);
+        this.getData(this.props.params.type);
     }
 
     componentDidUpdate(prevProps) {
@@ -121,8 +120,8 @@ class FilmList extends Component{
 
     componentWillUnmount () {
         // 上面步骤四，在组件移除前忽略正在进行中的请求
-        this.ignoreLastFetch = true
-        this.savePosition()
+        this.ignoreLastFetch = true;
+        this.savePosition();
     }
 
     render(){

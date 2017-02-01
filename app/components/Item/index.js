@@ -12,21 +12,17 @@ class Item extends Component{
 
         return (
           <div>
-            <div className="news-wrap">
-                <div className="news-img">
-                    <Link to={`film/${this.props.data.id}`}>
-                        <img width="100%" src={this.props.data.cover.origin} alt=""/>
-                    </Link>
-                </div>
-                <div className="news-con">
-                    <h4>
-                        <Link to={`film/${this.props.data.id}`}>
-                            {this.props.data.name}
-                        </Link>
-                    </h4>
-                    <p className="time-bar">{this.props.data.intro}</p>
-                </div>
-            </div>
+            <Link to={`film/${this.props.data.id}`}>
+              <div className="news-wrap">
+                  <div className="news-img">
+                      <img width="100%" src={this.props.data.cover.origin} alt=""/>
+                  </div>
+                  <div className="news-con">
+                      <h4>{this.props.data.name}</h4>
+                      <p className="time-bar">{this.props.data.intro}</p>
+                  </div>
+              </div>
+            </Link>
           </div>
         )
     }
