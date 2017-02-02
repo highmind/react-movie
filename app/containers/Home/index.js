@@ -82,30 +82,6 @@ class Home extends Component{
         console.log('--------Containers/Home---componentDidMount--------');
         this.getData('tuijian');
     }
-    //
-    // componentDidUpdate(prevProps) {
-    //     // 上面步骤3，通过参数更新数据
-    //     let oldId = prevProps.params.id;
-    //     console.log('--------Containers/Main--------');
-    //     console.log('Main执行componentDidUpdate');
-    //     console.log('oldId ' + oldId);
-    //     let id = this.props.params.id;
-    //     console.log('newId ' + id);
-    //     if (id !== oldId){
-    //         // 如果路由获取不到参数，获取推荐数据
-    //         if(typeof(id) == 'undefined'){
-    //           console.log("id是 " + id + " componetWillReceiveProps");
-    //           this.getData('tuijian');
-    //         }
-    //         // 否则获取相应栏目数据，根据id查询
-    //         else {
-    //           console.log('--------Containers/Main--------')
-    //           console.log("Main执行componentDidUpdate");
-    //           this.getData(id);
-    //         }
-    //     }
-    //
-    // }
 
     componentWillUnmount () {
         // 上面步骤四，在组件移除前忽略正在进行中的请求

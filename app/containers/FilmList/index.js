@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router';
 import {List, Loading, Button} from '../../components';
-import Axios from 'axios'; //引入axios处理ajax
+import Axios from 'axios';
 import './index.css';
-//首页页面
+
 class FilmList extends Component{
     constructor(props){
         super(props);
@@ -27,9 +27,7 @@ class FilmList extends Component{
         })
 
         let self = this;
-        let url = 'http://mockdata/' +
-        type +
-        '?page='+ this.state.page+'&count=' + this.state.count;
+        let url = 'http://mockdata/' + type + '?page=' + this.state.page +'&count=' + this.state.count;
         Axios.get(url).then(function(res){
             if(!self.ignoreLastFetch){
                 self.setState({
@@ -83,7 +81,7 @@ class FilmList extends Component{
         bottomLoading : true   //loading参数
       })
       // 正常数据情况下
-      // let page = this.state.page++;  
+      // let page = this.state.page++;
       // let url = 'http://mockdata/' + this.state.type +
       // '?page='+ this.state.page+'&count=' + this.state.count;
       // mock数据情况下
@@ -154,6 +152,5 @@ class FilmList extends Component{
     }
 
 }
-
 
 export default  FilmList
