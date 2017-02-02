@@ -117,11 +117,10 @@ class FilmList extends Component{
               this.getData(type);
             }
         }
-
     }
 
     componentWillUnmount () {
-        // 上面步骤四，在组件移除前忽略正在进行中的请求
+        // 在组件移除前忽略正在进行中的请求
         this.ignoreLastFetch = true;
         this.savePosition();
     }

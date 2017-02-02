@@ -5,9 +5,8 @@ class Card extends Component{
     constructor(props){
         super(props);
         this.state={}
-
     }
-
+    
     render(){
         let {data, cardFooterLeft, cardFooterRight} = this.props;
         return (

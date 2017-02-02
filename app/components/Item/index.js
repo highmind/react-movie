@@ -9,7 +9,6 @@ class Item extends Component{
     }
 
     render(){
-
         return (
           <div>
             <Link to={`film/${this.props.data.id}`}>

@@ -1,7 +1,6 @@
 import React,{Component} from 'react';
-import { Link } from 'react-router';
-// import Carousel from 'nuka-carousel';
-import { Carousel  } from 'antd-mobile';
+import {Link} from 'react-router';
+import {Carousel} from 'antd-mobile';
 import './index.css';
 class Slider extends React.Component{
     constructor(props){
@@ -12,7 +11,6 @@ class Slider extends React.Component{
     }
 
     makeChildren(data){
-        console.log(data)
         let nodes = data.map(function(detail, index){
             return(
                 <Link className="item" key={detail.id} to={detail.url}>
@@ -27,7 +25,6 @@ class Slider extends React.Component{
 
     render(){
         return (
-
             <Carousel key={this.props.id} className="h-slider"  infinite >
                {this.makeChildren(this.props.data)}
             </Carousel>
