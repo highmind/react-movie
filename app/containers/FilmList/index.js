@@ -83,7 +83,7 @@ class FilmList extends Component{
         bottomLoading : true   //loading参数
       })
       // 正常数据情况下
-      // let page = this.state.page++;
+      // let page = this.state.page++;  
       // let url = 'http://mockdata/' + this.state.type +
       // '?page='+ this.state.page+'&count=' + this.state.count;
       // mock数据情况下
