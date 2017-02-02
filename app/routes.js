@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Router, Route, IndexRoute, Redirect, hashHistory,browserHistory, applyRouterMiddleware, Link} from 'react-router';
+import {Route, IndexRoute, Redirect, hashHistory, browserHistory} from 'react-router';
 import {App, Home, FilmList, Cinema, User, Detail} from './containers';
 
 export default (
