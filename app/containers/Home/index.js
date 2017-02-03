@@ -18,7 +18,7 @@ class Home extends Component{
         this.props.navBarSet("芝麻电影")
     }
 
-    getData(id){
+    getData(){
         //数据返回之前，重新设置state,因为不同路由使用的一个组件，
         // 切换时，需要重置状态
         this.setState({
@@ -80,7 +80,7 @@ class Home extends Component{
 
     componentDidMount(){
         console.log('--------Containers/Home---componentDidMount--------');
-        this.getData('tuijian');
+        this.getData();
     }
 
     componentWillUnmount () {
