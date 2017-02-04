@@ -98,7 +98,7 @@ Mock.mock('http://mockdata/filmlist', 'get', {
         "cover": {
             "origin": "http://"+ ip +"/images/m-img1.jpg"
         },
-        "intro": "未达目的地 太空铁达尼1",
+        "intro": "飙车潜水斗土狼，三傻寻宝不设防1",
         "grade": "8.51",
         "watchCount": 3679251,
         "cinemaCount": 12,
@@ -109,7 +109,7 @@ Mock.mock('http://mockdata/filmlist', 'get', {
         "cover": {
             "origin": "http://"+ ip +"/images/m-img2.jpg"
         },
-        "intro": "未达目的地 太空铁达尼",
+        "intro": "飙车潜水斗土狼，三傻寻宝不设防",
         "grade": "8.52",
         "watchCount": 3679252,
         "cinemaCount": 2,
@@ -120,7 +120,7 @@ Mock.mock('http://mockdata/filmlist', 'get', {
         "cover": {
             "origin": "http://"+ ip +"/images/m-img3.jpg"
         },
-        "intro": "未达目的地 太空铁达尼3",
+        "intro": "飙车潜水斗土狼，三傻寻宝不设防3",
         "grade": "8.53",
         "watchCount": 3679253,
         "cinemaCount": 3,
@@ -131,7 +131,7 @@ Mock.mock('http://mockdata/filmlist', 'get', {
         "cover": {
             "origin": "http://"+ ip +"/images/m-img4.jpg"
         },
-        "intro": "未达目的地 太空铁达尼4",
+        "intro": "飙车潜水斗土狼，三傻寻宝不设防4",
         "grade": "8.54",
         "watchCount": 3679254,
         "cinemaCount": 1,
@@ -145,7 +145,7 @@ Mock.mock('http://mockdata/filmlist', 'get', {
         "cover": {
             "origin": "http://"+ ip +"/images/c-img1.jpg"
         },
-        "intro": "未达目的地 太空铁达尼1",
+        "intro": "飙车潜水斗土狼，三傻寻宝不设防1",
         "grade": "8.51",
         "watchCount": 3679251,
         "cinemaCount": 1221,
@@ -157,7 +157,7 @@ Mock.mock('http://mockdata/filmlist', 'get', {
         "cover": {
             "origin": "http://"+ ip +"/images/c-img2.jpg"
         },
-        "intro": "未达目的地 太空铁达尼",
+        "intro": "飙车潜水斗土狼，三傻寻宝不设防",
         "grade": "8.52",
         "watchCount": 3679252,
         "cinemaCount": 1222,
@@ -169,7 +169,7 @@ Mock.mock('http://mockdata/filmlist', 'get', {
         "cover": {
             "origin": "http://"+ ip +"/images/c-img3.jpg"
         },
-        "intro": "未达目的地 太空铁达尼3",
+        "intro": "飙车潜水斗土狼，三傻寻宝不设防3",
         "grade": "8.53",
         "watchCount": 3679253,
         "cinemaCount": 1223,
@@ -181,10 +181,10 @@ Mock.mock('http://mockdata/filmlist', 'get', {
         "cover": {
             "origin": "http://"+ ip +"/images/c-img4.jpg"
         },
-        "intro": "未达目的地 太空铁达尼4",
+        "intro": "飙车潜水斗土狼，三傻寻宝不设防4",
         "grade": "8.54",
         "watchCount": 3679254,
-        "cinemaCount": 1224,
+        "cinemaCount": 1218,
         "showTime":"1月21日"
       }
     ]
@@ -199,42 +199,75 @@ Mock.mock('http://mockdata/playing?page=0&count=4', 'get', {
         "id": 3545,
         "name": "太空旅客",
         "cover": {
-            "origin": "http://"+ ip +"/images/m-img1.jpg"
+            "origin": "http://"+ ip +"/images/m-cover-img1.jpg"
         },
-        "intro": "未达目的地 太空铁达尼1",
+        "intro": "飙车潜水斗土狼，三傻寻宝不设防1",
         "grade": "8.51",
         "watchCount": 3679251,
         "cinemaCount": 12,
       },
       {
         "id": 3546,
-        "name": "情圣",
+        "name": "功夫瑜伽",
         "cover": {
-            "origin": "http://"+ ip +"/images/m-img2.jpg"
+            "origin": "http://"+ ip +"/images/m-cover-img2.jpg"
         },
-        "intro": "未达目的地 太空铁达尼",
+        "intro": "飙车潜水斗土狼，三傻寻宝不设防",
         "grade": "8.52",
         "watchCount": 3679252,
         "cinemaCount": 2,
       },
       {
         "id": 3547,
-        "name": "星球大战外传：侠盗一号",
+        "name": "西游伏妖篇",
         "cover": {
-            "origin": "http://"+ ip +"/images/m-img3.jpg"
+            "origin": "http://"+ ip +"/images/m-cover-img3.jpg"
         },
-        "intro": "未达目的地 太空铁达尼3",
+        "intro": "飙车潜水斗土狼，三傻寻宝不设防3",
         "grade": "8.53",
         "watchCount": 3679253,
         "cinemaCount": 3,
       },
       {
         "id": 3548,
-        "name": "降临",
+        "name": "乘风破浪",
         "cover": {
-            "origin": "http://"+ ip +"/images/m-img4.jpg"
+            "origin": "http://"+ ip +"/images/m-cover-img4.jpg"
         },
-        "intro": "未达目的地 太空铁达尼4",
+        "intro": "飙车潜水斗土狼，三傻寻宝不设防4",
+        "grade": "8.54",
+        "watchCount": 3679254,
+        "cinemaCount": 1,
+      },
+      {
+        "id": 3549,
+        "name": "大闹天竺",
+        "cover": {
+            "origin": "http://"+ ip +"/images/m-cover-img5.jpg"
+        },
+        "intro": "飙车潜水斗土狼，三傻寻宝不设防4",
+        "grade": "8.54",
+        "watchCount": 3679254,
+        "cinemaCount": 1,
+      },
+      {
+        "id": 3550,
+        "name": "魔弦传说",
+        "cover": {
+            "origin": "http://"+ ip +"/images/m-cover-img6.jpg"
+        },
+        "intro": "飙车潜水斗土狼，三傻寻宝不设防4",
+        "grade": "8.54",
+        "watchCount": 3679254,
+        "cinemaCount": 1,
+      },
+      {
+        "id": 3551,
+        "name": "熊出没",
+        "cover": {
+            "origin": "http://"+ ip +"/images/m-cover-img7.jpg"
+        },
+        "intro": "飙车潜水斗土狼，三傻寻宝不设防4",
         "grade": "8.54",
         "watchCount": 3679254,
         "cinemaCount": 1,
@@ -247,11 +280,11 @@ Mock.mock('http://mockdata/coming?page=0&count=4', 'get', {
     "data" : [
       {
         "id": 3555,
-        "name": "西游伏妖篇",
+        "name": "游戏规则",
         "cover": {
-            "origin": "http://"+ ip +"/images/c-img1.jpg"
+            "origin": "http://"+ ip +"/images/c-cover-img1.jpg"
         },
-        "intro": "未达目的地 太空铁达尼",
+        "intro": "飙车潜水斗土狼，三傻寻宝不设防",
         "grade": "8.51",
         "watchCount": 3679251,
         "cinemaCount": 1221,
@@ -259,11 +292,11 @@ Mock.mock('http://mockdata/coming?page=0&count=4', 'get', {
       },
       {
         "id": 3556,
-        "name": "功夫瑜伽",
+        "name": "大脚印",
         "cover": {
-            "origin": "http://"+ ip +"/images/c-img2.jpg"
+            "origin": "http://"+ ip +"/images/c-cover-img2.jpg"
         },
-        "intro": "未达目的地 太空铁达尼",
+        "intro": "飙车潜水斗土狼，三傻寻宝不设防",
         "grade": "8.52",
         "watchCount": 3679252,
         "cinemaCount": 1222,
@@ -271,11 +304,11 @@ Mock.mock('http://mockdata/coming?page=0&count=4', 'get', {
       },
       {
         "id": 3557,
-        "name": "乘风破浪",
+        "name": "极限特工",
         "cover": {
-            "origin": "http://"+ ip +"/images/c-img3.jpg"
+            "origin": "http://"+ ip +"/images/c-cover-img3.jpg"
         },
-        "intro": "未达目的地 太空铁达尼",
+        "intro": "飙车潜水斗土狼，三傻寻宝不设防",
         "grade": "8.53",
         "watchCount": 3679253,
         "cinemaCount": 1223,
@@ -283,14 +316,50 @@ Mock.mock('http://mockdata/coming?page=0&count=4', 'get', {
       },
       {
         "id": 3558,
-        "name": "大闹天竺",
+        "name": "疯狂俏娇人",
         "cover": {
-            "origin": "http://"+ ip +"/images/c-img4.jpg"
+            "origin": "http://"+ ip +"/images/c-cover-img4.jpg"
         },
-        "intro": "未达目的地 太空铁达尼",
+        "intro": "飙车潜水斗土狼，三傻寻宝不设防",
         "grade": "8.54",
         "watchCount": 3679254,
-        "cinemaCount": 1224,
+        "cinemaCount": 1218,
+        "showTime":"1月21日"
+      },
+      {
+        "id": 3559,
+        "name": "萤火奇兵",
+        "cover": {
+            "origin": "http://"+ ip +"/images/c-cover-img5.jpg"
+        },
+        "intro": "飙车潜水斗土狼，三傻寻宝不设防",
+        "grade": "8.54",
+        "watchCount": 3679254,
+        "cinemaCount": 1218,
+        "showTime":"1月21日"
+      },
+      {
+        "id": 3560,
+        "name": "决战食神",
+        "cover": {
+            "origin": "http://"+ ip +"/images/c-cover-img6.jpg"
+        },
+        "intro": "飙车潜水斗土狼，三傻寻宝不设防",
+        "grade": "8.54",
+        "watchCount": 3679254,
+        "cinemaCount": 1218,
+        "showTime":"1月21日"
+      },
+      {
+        "id": 3561,
+        "name": "刺客信条",
+        "cover": {
+            "origin": "http://"+ ip +"/images/c-cover-img7.jpg"
+        },
+        "intro": "飙车潜水斗土狼，三傻寻宝不设防",
+        "grade": "8.54",
+        "watchCount": 3679254,
+        "cinemaCount": 1218,
         "showTime":"1月21日"
       }
     ]
@@ -304,9 +373,9 @@ Mock.mock('http://mockdata/playing?page=2&count=4', 'get', {
         "id": "@id",
         "name": "太空旅客",
         "cover": {
-            "origin": "http://"+ ip +"/images/m-img1.jpg"
+            "origin": "http://"+ ip +"/images/m-cover-img1.jpg"
         },
-        "intro": "@csentence(16,24)-playing",
+        "intro": "@csentence(16,18)-playing",
         "grade": "8.51",
         "watchCount": 3679251,
         "cinemaCount": 12,
@@ -315,9 +384,9 @@ Mock.mock('http://mockdata/playing?page=2&count=4', 'get', {
         "id": "@id",
         "name": "情圣",
         "cover": {
-            "origin": "http://"+ ip +"/images/m-img2.jpg"
+            "origin": "http://"+ ip +"/images/m-cover-img2.jpg"
         },
-        "intro": "@csentence(16,24)-playing",
+        "intro": "@csentence(16,18)-playing",
         "grade": "8.52",
         "watchCount": 3679252,
         "cinemaCount": 2,
@@ -326,9 +395,9 @@ Mock.mock('http://mockdata/playing?page=2&count=4', 'get', {
         "id": "@id",
         "name": "星球大战外传：侠盗一号",
         "cover": {
-            "origin": "http://"+ ip +"/images/m-img3.jpg"
+            "origin": "http://"+ ip +"/images/m-cover-img3.jpg"
         },
-        "intro": "@csentence(16,24)-playing",
+        "intro": "@csentence(16,18)-playing",
         "grade": "8.53",
         "watchCount": 3679253,
         "cinemaCount": 3,
@@ -337,9 +406,9 @@ Mock.mock('http://mockdata/playing?page=2&count=4', 'get', {
         "id": "@id",
         "name": "降临",
         "cover": {
-            "origin": "http://"+ ip +"/images/m-img4.jpg"
+            "origin": "http://"+ ip +"/images/m-cover-img4.jpg"
         },
-        "intro": "@csentence(16,24)-playing",
+        "intro": "@csentence(16,18)-playing",
         "grade": "8.54",
         "watchCount": 3679254,
         "cinemaCount": 1,
@@ -357,7 +426,7 @@ Mock.mock('http://mockdata/coming?page=2&count=4', 'get', {
         "cover": {
             "origin": "http://"+ ip +"/images/c-img1.jpg"
         },
-        "intro": "@csentence(16,24)-coming",
+        "intro": "@csentence(16,18)-coming",
         "grade": "8.51",
         "watchCount": 3679251,
         "cinemaCount": 1221,
@@ -369,7 +438,7 @@ Mock.mock('http://mockdata/coming?page=2&count=4', 'get', {
         "cover": {
             "origin": "http://"+ ip +"/images/c-img2.jpg"
         },
-        "intro": "@csentence(16,24)-coming",
+        "intro": "@csentence(16,18)-coming",
         "grade": "8.52",
         "watchCount": 3679252,
         "cinemaCount": 1222,
@@ -381,7 +450,7 @@ Mock.mock('http://mockdata/coming?page=2&count=4', 'get', {
         "cover": {
             "origin": "http://"+ ip +"/images/c-img3.jpg"
         },
-        "intro": "@csentence(16,24)-coming",
+        "intro": "@csentence(16,18)-coming",
         "grade": "8.53",
         "watchCount": 3679253,
         "cinemaCount": 1223,
@@ -393,10 +462,10 @@ Mock.mock('http://mockdata/coming?page=2&count=4', 'get', {
         "cover": {
             "origin": "http://"+ ip +"/images/c-img4.jpg"
         },
-        "intro": "@csentence(16,24)-coming",
+        "intro": "@csentence(16,18)-coming",
         "grade": "8.54",
         "watchCount": 3679254,
-        "cinemaCount": 1224,
+        "cinemaCount": 1218,
         "showTime":"1月21日"
       }
     ]

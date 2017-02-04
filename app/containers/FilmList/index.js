@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router';
-import {List, Loading, Button} from '../../components';
+import {Item, List, Loading, Button} from '../../components';
 import Axios from 'axios';
 import './index.css';
 

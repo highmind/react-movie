@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router';
+import {Button} from '../../components';
 import './index.css';
 
 class Item extends Component{
@@ -19,6 +20,9 @@ class Item extends Component{
                   <div className="news-con">
                       <h4>{this.props.data.name}</h4>
                       <p className="time-bar">{this.props.data.intro}</p>
+                  </div>
+                  <div className="news-right">
+                    <Button isPlain clsName="movie-more-btn">更多</Button>
                   </div>
               </div>
             </Link>

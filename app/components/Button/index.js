@@ -22,7 +22,7 @@ class Button extends Component{
     let {clsName, type, disabled, isPlain, clickEvent} = this.props;
     let disableCls = disabled ? 'btn-disabled' : '';
     let isPlainCls = isPlain ? 'btn-is-plain' : '';
-    let finalClsName = `btn ${clsName} btn-${type} ${isPlainCls} ${disableCls} `;
+    let finalClsName = `btn btn-${type} ${isPlainCls} ${disableCls} ${clsName} `;
     return (
         <button
           type="button"
