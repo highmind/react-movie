@@ -22,7 +22,7 @@ class Item extends Component{
                       <p className="time-bar">{this.props.data.intro}</p>
                   </div>
                   <div className="news-right">
-                    <Button isPlain clsName="movie-more-btn">更多</Button>
+                    <Button  clsName="movie-more-btn" isPlain>更多</Button>
                   </div>
               </div>
             </Link>

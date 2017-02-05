@@ -15,6 +15,6 @@
 .btn-is-plain{background:none;color:#000;}
 
 /*禁用的类放到最底部*/
-.btn-disabled{color: #bbb;
+.btn-is-plain.btn-disabled,.btn-warning.btn-disabled,.btn-primary.btn-disabled,.btn-default.btn-disabled{color: #bbb;
         background-color: #ddd;
         border: 0;}

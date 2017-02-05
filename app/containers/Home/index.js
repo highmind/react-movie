@@ -150,11 +150,11 @@ class Home extends Component{
                     <Slider id={this.state.sliderId} data={this.state.slider} />
                     {this.getFilmList(this.state.playingData)}
                     <Link to="/filmlist/playing">
-                      <Button clsName="home-more" isPlain>更多热映电影</Button>
+                      <Button type="ghost" clsName="home-more">更多热映电影</Button>
                     </Link>
                     {this.getCommingFilmList(this.state.comingData)}
                     <Link to="/filmlist/coming">
-                      <Button clsName="home-more" isPlain>更多即将上映电影</Button>
+                      <Button type="ghost" clsName="home-more">更多即将上映电影</Button>
                     </Link>
                 </div>
             </div>
