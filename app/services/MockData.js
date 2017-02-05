@@ -424,7 +424,7 @@ Mock.mock('http://mockdata/coming?page=2&count=4', 'get', {
         "id": "@id",
         "name": "西游伏妖篇",
         "cover": {
-            "origin": "http://"+ ip +"/images/c-img1.jpg"
+            "origin": "http://"+ ip +"/images/c-cover-img1.jpg"
         },
         "intro": "@csentence(16,18)-coming",
         "grade": "8.51",
@@ -436,7 +436,7 @@ Mock.mock('http://mockdata/coming?page=2&count=4', 'get', {
         "id": "@id",
         "name": "功夫瑜伽",
         "cover": {
-            "origin": "http://"+ ip +"/images/c-img2.jpg"
+            "origin": "http://"+ ip +"/images/c-cover-img2.jpg"
         },
         "intro": "@csentence(16,18)-coming",
         "grade": "8.52",
@@ -448,7 +448,7 @@ Mock.mock('http://mockdata/coming?page=2&count=4', 'get', {
         "id": "@id",
         "name": "乘风破浪",
         "cover": {
-            "origin": "http://"+ ip +"/images/c-img3.jpg"
+            "origin": "http://"+ ip +"/images/c-cover-img3.jpg"
         },
         "intro": "@csentence(16,18)-coming",
         "grade": "8.53",
@@ -460,7 +460,7 @@ Mock.mock('http://mockdata/coming?page=2&count=4', 'get', {
         "id": "@id",
         "name": "大闹天竺",
         "cover": {
-            "origin": "http://"+ ip +"/images/c-img4.jpg"
+            "origin": "http://"+ ip +"/images/c-cover-img4.jpg"
         },
         "intro": "@csentence(16,18)-coming",
         "grade": "8.54",
