@@ -1,1 +1,3 @@
 .main-con{padding-top:2.5rem;}
+.user-input{display: block;margin:0 auto;margin-top:1rem;font-size:0.8rem;width:80%;height:1.5rem;border:none;border-bottom:1px solid #ccc;}
+.login-btn{display: block;width:80%;margin:1rem auto;}

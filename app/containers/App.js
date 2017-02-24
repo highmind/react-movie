@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {bindActionCreators} from 'redux'
 import {NavBar, Nav, Icon} from '../components';
+import {Link} from 'react-router';
 import Axios from 'axios';
 import * as actionCreators from '../actions/actions'
 import {connect} from 'react-redux';
@@ -63,9 +64,9 @@ class App extends Component{
       ];
       // NavBar右侧子组件
       let navBarRightNode = [
-        <a className="right-btn-1" href="#">
+        <Link className="right-btn-1" to="/user/">
           <Icon key="0" type="icon-user" />
-        </a>,
+        </Link>,
         <a className="right-btn-2" href="#"><span className="city">秦皇岛</span><Icon key="1" type="icon-xiangxiajiantou" /></a>
       ];
 
