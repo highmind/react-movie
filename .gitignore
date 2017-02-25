@@ -1,6 +1,7 @@
 #################
 ## Eclipse
 #################
+app/services/node_modules
 node_modules
 bower_components
 *.pydevproject

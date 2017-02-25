@@ -1,0 +1,17 @@
+{
+  "name": "movie-services",
+  "version": "1.0.0",
+  "description": "",
+  "main": "MockData.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "jsonwebtoken": "^7.3.0",
+    "mongoose": "^4.8.4"
+  }
+}
