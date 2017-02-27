@@ -31,7 +31,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "rimraf dist & webpack --config webpack.config.pro.js -p",
+    "build": "rimraf dist & webpack --config webpack.config.prod.js -p",
     "clean": "rimraf dist",
     "start": "webpack-dev-server --config webpack.config.dev.js  --history-api-fallback"
   },
