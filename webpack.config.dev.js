@@ -37,14 +37,11 @@ module.exports =  {
   module: {
 
     rules: [
-        // 1 es2015
+        // 1 js 和 es2015
           {
               test: /\.js$/,
               exclude: /node_modules/,
-              loader: 'babel-loader',
-              query: {
-                presets: ['es2015', 'react',"stage-2"],
-              },
+              loader: 'babel-loader'
           },
         // 2 css
         {
