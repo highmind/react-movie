@@ -1,6 +1,6 @@
 import { compose, createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
-import rootReducer from '../reducers/reducers'
+import rootReducer from '../reducers/reducers'  //导入合并的reducer
 
 export default function configureStore(initialState) {
   //启动redux devtools 工具

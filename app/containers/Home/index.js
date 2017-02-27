@@ -57,23 +57,26 @@ class Home extends Component{
     // 设置滚动条位置
     setPosition(){
         console.log('...setPosition...');
+        console.log(this.props.position);
         let posData = this.props.position;//获取store中的滚动条位置信息
         let len = posData.length;         //获取信息数组长度，用于获取最新的位置信息
-        let savePos = 0;                  //初始位置为0
-        let savePath = '';                //初始pathname为空
-        if(len != 0 ){                    //当位置信息数组不为空的时候，设置位置和pathname
-            savePos = posData[len - 1].position.scrollTop;
-            savePath = posData[len - 1].position.path;
-        }
+        // let savePos = 0;                  //初始位置为0
+        // let savePath = '';                //初始pathname为空
+        // if(len != 0 ){                    //当位置信息数组不为空的时候，设置位置和pathname
+        let  savePos = posData[len - 1].position.scrollTop;
+        let  savePath = posData[len - 1].position.path;
+        console.log(savePos);
+        console.log(savePath)
+        // }
 
         let path = this.props.location.pathname; //获取当前pathname
         if(path == savePath){                    //当store中路径和当前路径一致时，
-          window.scrollTo(0, savePos);           //设置滚动条位置到 相应位置
-          let positionData = {"scrollTop" : 0, "path" : this.props.location.pathname};
-          this.props.setScroll(positionData);    //设置store中当前path为0，解决导航栏目切换时，滚动条位置
-        }
-        else{                                   //否则滚动到顶部
-          window.scrollTo(0, 0);
+             window.scrollTo(0, savePos);           //设置滚动条位置到 相应位置
+             let positionData = {"scrollTop" : 0, "path" : this.props.location.pathname};
+             //this.props.setScroll(positionData);    //设置store中当前path为0，解决导航栏目切换时，滚动条位置
+         }
+        else{    //否则滚动到顶部
+           window.scrollTo(0, 0);
         }
 
     }

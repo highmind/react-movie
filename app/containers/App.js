@@ -46,13 +46,14 @@ class App extends Component{
     }
 
     getNavBarText(){
-      let textArr = this.props.navBarText;
-      let len = textArr.length;
-      if(len != 0){
-        return textArr[len - 1].text;
-      }else{
-        return "芝麻电影"
-      }
+      // let textArr = this.props.navBarText;
+      // let len = textArr.length;
+      // if(len != 0){
+      //   return textArr[len - 1].text;
+      // }else{
+      //   return "芝麻电影"
+      // }
+      return this.props.navBarText;
     }
 
     render(){
@@ -84,17 +85,20 @@ class App extends Component{
     }
 
 }
-
+//融合state 进  props，这样组件可以使用store中的数据，通过this.props
+//即返回props
 function mapStateToProps(state){
     return {
       position: state.setScroll,
-      todoList : state.todos,
       navBarText : state.navBarSet
     }
 }
 
+//融合dispatch 进 props，这样组件可以通过this.props来调用dispatch
+//即返回action
 function mapDispatchToProps(dispatch){
     return bindActionCreators(actionCreators, dispatch);
 }
 
+// 将App组件 于 redux进行连接
 export default  connect(mapStateToProps, mapDispatchToProps)(App)
