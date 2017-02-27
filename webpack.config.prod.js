@@ -1,5 +1,4 @@
-// 开发环境webpack配置
-// 目的： 1 分离出 css文件 2 分离出公共js库文件  3 分离出业务逻辑js文件
+// 生产环境
 const webpack = require("webpack");
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -13,16 +12,12 @@ const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
 const ExtractTextPlugin = require("extract-text-webpack-plugin"); //分离css
 
 module.exports =  {
-
-  devtool: 'inline-source-map',  //配置sourcemap，方便错误调
-
-  //entry 入口源文件
   entry: {
     app: './app/index.js',
-    vendor:['react', 'react-dom', 'react-router', 'axios', 'redux', 'react-redux'] //分离库文件
+    vendor:['react', 'react-dom', 'react-router', 'axios', 'redux', 'react-redux']
   },
 
-  // output 输出路径
+  // output 是放入产生出来的结果的相关参数
   output: {
     path: `${__dirname}/dist`,
     publicPath : '/',  //用于生成的 路径为 为 /index_bundle.js
@@ -70,21 +65,11 @@ module.exports =  {
 
     ],
   },
-
-  // devServer 则是 webpack-dev-server 设定
-  devServer: {
-    // hot:true,
-    host:'0.0.0.0',  //  使用本地ip访问
-    inline: true,
-    quiet: true,
-    port: 8080,
-  },
-
-  // plugins 放置所使用的插件
+  // plugins 放置所使用的外挂
   plugins: [
       HTMLWebpackPluginConfig,
 
-      //1 chunk插件，分离公共库文件
+      //1 chunk插件
       new webpack.optimize.CommonsChunkPlugin({name:"vendor", filename:"vendor.bundle.js"}),
 
       //2 处理react waring问题
@@ -94,7 +79,10 @@ module.exports =  {
         }
       }),
 
-      // 3 分离css文件
+      //3 分离css
+      // new ExtractTextPlugin('[name].bundle.css', {
+      //     allChunks: true
+      // })
       new ExtractTextPlugin({
         filename: "[name].bundle.css",
         disable: false,
