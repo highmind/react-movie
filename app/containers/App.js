@@ -89,13 +89,13 @@ class App extends Component{
 //即返回props
 function mapStateToProps(state){
     return {
-      position: state.setScroll,
-      navBarText : state.navBarSet
+      position: state.setScrollTest, //setScrollTest 为 reducer的函数名
+      navBarText : state.navBarSetTest //navBarSetTest 为 reducer的函数名
     }
 }
 
 //融合dispatch 进 props，这样组件可以通过this.props来调用dispatch
-//即返回action
+//即返回action,调用方式 this.props.actions. 相应的actions
 function mapDispatchToProps(dispatch){
     return {actions:bindActionCreators(actionCreators, dispatch)};
 }

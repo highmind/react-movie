@@ -48,7 +48,7 @@ class FilmList extends Component{
           "scrollTop" : scrollTop,
           "path" : this.props.location.pathname
         };//redux中要存储的数据
-        this.props.setScroll(positionData);//通过action设置位置信息
+        this.props.actions.setScroll(positionData);//通过action设置位置信息
     }
 
     // 设置滚动条位置

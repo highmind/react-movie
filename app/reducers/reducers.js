@@ -13,7 +13,9 @@ let defaultPos = [
     }
   }
 ]
-function setScroll(state = defaultPos, action){
+
+// reducer一般是纯函数，尽量不做逻辑操作。函数名自定义即可
+function setScrollTest(state = defaultPos, action){
   switch (action.type) {
     case SCROLL_POSITION:
       console.log('setScroll ... SCROLL_POSITION ... reducers')
@@ -31,7 +33,7 @@ function setScroll(state = defaultPos, action){
 }
 
 
-function navBarSet(state = [], action){
+function navBarSetTest(state = [], action){
   switch (action.type) {
     case NAVBAR_SET:
       return action.text
@@ -43,8 +45,8 @@ function navBarSet(state = [], action){
 
 //合并多个reducer,大型项目中，合并拆分成文件的 reducer，方便维护
 const rootReducer = combineReducers({
-  setScroll,
-  navBarSet
+  setScrollTest,
+  navBarSetTest
 })
 
 
