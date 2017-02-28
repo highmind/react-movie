@@ -8,7 +8,7 @@ class Cinema extends Component{
         super(props);
         this.state = {
         }
-        this.props.navBarSet("全部影院")
+        this.props.actions.navBarSet("全部影院")
     }
 
 

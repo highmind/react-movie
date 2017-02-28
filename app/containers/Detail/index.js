@@ -27,7 +27,7 @@ class Detail extends Component{
                 loading : false
             })
 
-            self.props.navBarSet(filmData.name)
+            self.props.actions.navBarSet(filmData.name)
         })
         window.scrollTo(0, 0);
     }

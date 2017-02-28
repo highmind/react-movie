@@ -8,7 +8,7 @@ class User extends Component{
         super(props);
         this.state = {
         }
-        this.props.navBarSet("个人中心")
+        this.props.actions.navBarSet("个人中心")
     }
 
 

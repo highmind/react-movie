@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
-import {bindActionCreators} from 'redux'
+import React, { Component } from 'react';
+import {bindActionCreators} from 'redux';
 import {NavBar, Nav, Icon} from '../components';
 import {Link} from 'react-router';
 import Axios from 'axios';
-import * as actionCreators from '../actions/actions'
+import * as actionCreators from '../actions/actions';
 import {connect} from 'react-redux';
 // 主容器
 class App extends Component{
@@ -97,7 +97,7 @@ function mapStateToProps(state){
 //融合dispatch 进 props，这样组件可以通过this.props来调用dispatch
 //即返回action
 function mapDispatchToProps(dispatch){
-    return bindActionCreators(actionCreators, dispatch);
+    return {actions:bindActionCreators(actionCreators, dispatch)};
 }
 
 // 将App组件 于 redux进行连接

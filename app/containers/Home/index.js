@@ -15,7 +15,7 @@ class Home extends Component{
           sliderId : 0,    //轮播图组件id
           loading : true   //loading参数
         }
-        this.props.navBarSet("芝麻电影")
+        this.props.actions.navBarSet("芝麻电影");
     }
 
     getData(){
@@ -51,7 +51,7 @@ class Home extends Component{
         let scrollTop = document.body.scrollTop;//获取滚动条高度
         let path = this.props.location.pathname;//获取当前的pathname
         let positionData = {"scrollTop" : scrollTop, "path" : this.props.location.pathname};//redux中要存储的数据
-        this.props.setScroll(positionData);//通过action设置位置信息
+        this.props.actions.setScroll(positionData);//通过action设置位置信息
     }
 
     // 设置滚动条位置
