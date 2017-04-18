@@ -25,6 +25,19 @@ class Home extends Component{
           loading : true   //loading参数
         })
 
+        //测试webpack反向代理，完整接口数据http://api.chinaplat.com/getval_2017
+        Axios.post('/getval_2017', {
+          Action : 'GetCourseTypesList',
+          kc_types : '1'
+        })
+        .then(function (response) {
+          console.log(response.data);
+        })
+        .catch(function (response) {
+          console.log(response);
+        });
+
+
         let self = this;
         let url = 'http://mockdata/filmlist';
         Axios.get(url).then(function(res){

@@ -75,6 +75,13 @@ module.exports =  {
     inline: true,
     quiet: true,
     port: 8080,
+    proxy: {  //反向代理，将ajax请求数据，转发，完整接口url为http://api.chinaplat.com/getval_2017
+       '/getval_2017': {
+       target: 'http://api.chinaplat.com',
+       changeOrigin: true,
+       secure: false
+       }
+    }
   },
 
   // plugins 放置所使用的插件
