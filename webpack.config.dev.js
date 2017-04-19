@@ -1,5 +1,5 @@
 // 开发环境webpack配置
-// 目的： 1 分离出 css文件 2 分离出公共js库文件  3 分离出业务逻辑js文件
+// 目的： 1 分离出 css文件 2 分离出公共js库文件  3 分离出业务逻辑js文件 4 反向代理到线上真实接口
 const webpack = require("webpack");
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
