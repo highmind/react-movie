@@ -19,7 +19,7 @@ module.exports =  {
   //entry 入口源文件
   entry: {
     app: './app/index.js',
-    vendor:['react', 'react-dom', 'react-router', 'axios', 'redux', 'react-redux'] //分离库文件
+    vendor:['react', 'react-dom', 'react-router', 'axios', 'redux', 'react-redux','react-move'] //分离库文件
   },
 
   // output 输出路径
@@ -76,10 +76,11 @@ module.exports =  {
     quiet: true,
     port: 8080,
     proxy: {  //反向代理，将ajax请求数据，转发，完整接口url为http://api.chinaplat.com/getval_2017
-       '/getval_2017': {
-       target: 'http://api.chinaplat.com',
+       '/api': {
+       target: 'https://api.douban.com/v2',
        changeOrigin: true,
-       secure: false
+       secure: false,
+       pathRewrite: {"^/api" : ""} //去掉/api,取剩下的部分
        }
     }
   },

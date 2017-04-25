@@ -29,7 +29,9 @@
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "react-move": "^1.1.6"
+  },
   "scripts": {
     "build": "rimraf dist & webpack --config webpack.config.prod.js -p",
     "clean": "rimraf dist",

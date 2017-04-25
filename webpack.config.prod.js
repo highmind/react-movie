@@ -14,7 +14,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin"); //分离css
 module.exports =  {
   entry: {
     app: './app/index.js',
-    vendor:['react', 'react-dom', 'react-router', 'axios', 'redux', 'react-redux']
+    vendor:['react', 'react-dom', 'react-router', 'axios', 'redux', 'react-redux','react-move']
   },
 
   // output 是放入产生出来的结果的相关参数
