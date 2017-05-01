@@ -93,9 +93,10 @@ module.exports =  {
       new webpack.optimize.CommonsChunkPlugin({name:"vendor", filename:"vendor.bundle.js"}),
 
       //2 处理react waring问题
+      //而且可以在代码中直接使用，通过判断是否是production，可以不打包某些代码
       new webpack.DefinePlugin({
         "process.env": {
-          NODE_ENV: JSON.stringify("production")
+          NODE_ENV: JSON.stringify("development")
         }
       }),
 

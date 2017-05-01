@@ -15,7 +15,7 @@ class FilmList extends Component{
           loading : true,   //loading参数
           bottomLoading : false
         }
-        this.props.actions.navBarSet("全部影片");
+
         this.handleClick = this.handleClick.bind(this);
     }
 
@@ -99,6 +99,7 @@ class FilmList extends Component{
     }
 
     componentDidMount(){
+        this.props.actions.navBarSet("全部影片");
         this.getData(this.props.params.type);
     }
 

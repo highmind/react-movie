@@ -15,7 +15,7 @@ class Nav extends React.Component{
         let navNodes = this.props.data.map(function(detail, index){
            if(index == 0){
                 return(
-                  <IndexLink className="nav-link" to="/" activeClassName="route-active">
+                  <IndexLink key={detail.id} className="nav-link" to="/" activeClassName="route-active">
                     {detail.name}
                     <i className="iconfont icon-xiangyoujiantou"></i>
                   </IndexLink>

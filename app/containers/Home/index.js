@@ -15,7 +15,6 @@ class Home extends Component{
           sliderId : 0,    //轮播图组件id
           loading : true   //loading参数
         }
-        this.props.actions.navBarSet("芝麻电影");
     }
 
     getData(){
@@ -92,6 +91,7 @@ class Home extends Component{
     }
 
     componentDidMount(){
+        this.props.actions.navBarSet("芝麻电影");
         console.log('--------Containers/Home---componentDidMount--------');
         this.getData();
     }
