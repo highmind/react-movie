@@ -1,5 +1,5 @@
 import Mock from 'mockjs';
-let ip = 'localhost:8080';
+let ip = '192.168.0.114:8080';
 // 详情页mock数据
 Mock.mock('http://mockdata/detail', 'get', {
     "film": {
@@ -193,11 +193,11 @@ Mock.mock('http://mockdata/filmlist', 'get', {
 
 
 //playing电影数据
-Mock.mock('http://mockdata/playing?page=0&count=4', 'get', {
+Mock.mock('http://mockdata/playing?page=0&count=7', 'get', {
     "data" : [
       {
-        "id": 3545,
-        "name": "太空旅客",
+        "id": "@id",
+        "name": "太空旅客-@cword",
         "cover": {
             "origin": "http://"+ ip +"/images/m-cover-img1.jpg"
         },
@@ -207,8 +207,8 @@ Mock.mock('http://mockdata/playing?page=0&count=4', 'get', {
         "cinemaCount": 12,
       },
       {
-        "id": 3546,
-        "name": "功夫瑜伽",
+        "id": "@id",
+        "name": "功夫瑜伽-@cword",
         "cover": {
             "origin": "http://"+ ip +"/images/m-cover-img2.jpg"
         },
@@ -218,8 +218,8 @@ Mock.mock('http://mockdata/playing?page=0&count=4', 'get', {
         "cinemaCount": 2,
       },
       {
-        "id": 3547,
-        "name": "西游伏妖篇",
+        "id": "@id",
+        "name": "西游伏妖篇-@cword",
         "cover": {
             "origin": "http://"+ ip +"/images/m-cover-img3.jpg"
         },
@@ -229,8 +229,8 @@ Mock.mock('http://mockdata/playing?page=0&count=4', 'get', {
         "cinemaCount": 3,
       },
       {
-        "id": 3548,
-        "name": "乘风破浪",
+        "id": "@id",
+        "name": "乘风破浪-@cword",
         "cover": {
             "origin": "http://"+ ip +"/images/m-cover-img4.jpg"
         },
@@ -240,8 +240,8 @@ Mock.mock('http://mockdata/playing?page=0&count=4', 'get', {
         "cinemaCount": 1,
       },
       {
-        "id": 3549,
-        "name": "大闹天竺",
+        "id": "@id",
+        "name": "大闹天竺-@cword",
         "cover": {
             "origin": "http://"+ ip +"/images/m-cover-img5.jpg"
         },
@@ -251,8 +251,8 @@ Mock.mock('http://mockdata/playing?page=0&count=4', 'get', {
         "cinemaCount": 1,
       },
       {
-        "id": 3550,
-        "name": "魔弦传说",
+        "id": "@id",
+        "name": "魔弦传说-@cword",
         "cover": {
             "origin": "http://"+ ip +"/images/m-cover-img6.jpg"
         },
@@ -262,8 +262,8 @@ Mock.mock('http://mockdata/playing?page=0&count=4', 'get', {
         "cinemaCount": 1,
       },
       {
-        "id": 3551,
-        "name": "熊出没",
+        "id": "@id",
+        "name": "熊出没-@cword",
         "cover": {
             "origin": "http://"+ ip +"/images/m-cover-img7.jpg"
         },
@@ -367,7 +367,7 @@ Mock.mock('http://mockdata/coming?page=0&count=4', 'get', {
 })
 
 //playing电影列表分页数据，使用随机数据
-Mock.mock('http://mockdata/playing?page=2&count=4', 'get', {
+Mock.mock('http://mockdata/playing?page=2&count=7', 'get', {
     "data" : [
       {
         "id": "@id",
@@ -475,5 +475,5 @@ Mock.mock('http://mockdata/coming?page=2&count=4', 'get', {
 
 // 设置数据延迟时间，模拟loading
 Mock.setup({
-    timeout: '300'
+    timeout: '500'
 })
