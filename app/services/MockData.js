@@ -1,5 +1,5 @@
 import Mock from 'mockjs';
-let ip = '192.168.0.114:8080';
+let ip = 'localhost:8080';
 // 详情页mock数据
 Mock.mock('http://mockdata/detail', 'get', {
     "film": {
