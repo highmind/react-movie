@@ -276,7 +276,7 @@ Mock.mock('http://mockdata/playing?page=0&count=7', 'get', {
 })
 
 //coming电影数据
-Mock.mock('http://mockdata/coming?page=0&count=4', 'get', {
+Mock.mock('http://mockdata/coming?page=0&count=7', 'get', {
     "data" : [
       {
         "id": 3555,
